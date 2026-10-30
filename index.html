@@ -1,188 +1,608 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Conciertos y fiestas de música electrónica | ClandestinoClub</title>
-  <meta name="description" content="Descubre conciertos, fiestas y eventos de música electrónica, indie, techno y house en España. La escena underground en un solo lugar.">
+  <meta name="description"
+    content="Descubre conciertos, fiestas y eventos de música electrónica, indie, techno y house en España. La escena underground en un solo lugar.">
+
+  <!--  las fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!--El css-->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="logo" title="ClandestinoClub, inicio">
-      <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#8b5cf6"/></svg>
-      Clandestino<span>Club</span>
-    </a>
-    <nav aria-label="Navegación principal">
-      <ul class="nav-list">
-        <li><a href="index.html" class="active" title="Ir al inicio de ClandestinoClub">Inicio</a></li>
-        <li><a href="eventos.html" title="Ver todos los eventos de música">Eventos</a></li>
-        <li><a href="artistas.html" title="Conocer a los artistas y DJs">Artistas</a></li>
-        <li><a href="galeria.html" title="Galería de fotos de conciertos">Galería</a></li>
-        <li><a href="sobre-nosotros.html" title="Quiénes somos">Sobre nosotros</a></li>
-      </ul>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-btn" aria-label="Buscar">&#128269;</button>
-      <a href="entradas.html" class="btn btn-sm" title="Comprar entradas para conciertos">Entradas</a>
-      <button class="icon-btn" aria-label="Abrir menú">&#9776;</button>
-    </div>
-  </div>
-</header>
+  <header class="site-header" style="background-image:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url(img/564d011faa10b89f14276955c89f7fa2.jpg); 
+    background-size: cover; background-position: center;">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" title="ClandestinoClub, inicio">
+        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#8b5cf6" />
+        </svg>
+        Clandestino<span>Club</span>
+      </a>
 
-<main>
-  <section class="hero">
-    <div class="container">
-      <p class="eyebrow">Conciertos <i>/</i> Fiestas <i>/</i> Cultura musical</p>
-      <h1>Clandestino<span>Club</span></h1>
-      <p class="hero-text">Descubre los mejores <strong>conciertos</strong>, fiestas y eventos de <strong>música electrónica</strong>, indie, techno, house y mucho más. La escena underground, en un solo lugar.</p>
-      <a href="eventos.html" class="btn" title="Ver próximos conciertos y fiestas">Ver próximos eventos &rarr;</a>
-    </div>
-  </section>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active" title="Ir al inicio de ClandestinoClub">Inicio</a></li>
+          <li><a href="eventos.html" title="Ver todos los eventos de música">Eventos</a></li>
+          <li><a href="artistas.html" title="Conocer a los artistas y DJs">Artistas</a></li>
+          <li><a href="galeria.html" title="Galería de fotos de conciertos">Galería</a></li>
+          <li><a href="sobre-nosotros.html" title="Quiénes somos">Sobre nosotros</a></li>
+        </ul>
+      </nav>
 
-  <section class="events container" aria-labelledby="proximos-eventos">
-    <div class="section-head">
-      <h2 id="proximos-eventos">Próximos <span>eventos</span></h2>
-      <a href="eventos.html" class="link-purple" title="Ver todos los eventos de música">Ver todos los eventos &rarr;</a>
-    </div>
-
-    <div class="cards">
-      <article class="card">
-        <div class="card-img">
-          <span class="tag tag-purple">Techno</span>
-          <img src="img/dj-techno-madrid.webp" alt="DJ de techno pinchando en La Bodega Club de Madrid" width="400" height="230">
-        </div>
-        <div class="card-body">
-          <time class="date" datetime="2025-11-01"><small>Sáb</small><b>01</b><small>Nov</small></time>
-          <div>
-            <h3>Rrose</h3>
-            <p class="place">La Bodega Club · Madrid</p>
-            <p class="meta">Techno · 23:00 – 06:00</p>
-          </div>
-          <a href="eventos.html#rrose" class="go" title="Ver el evento de Rrose en Madrid" aria-label="Ver evento de Rrose">&rarr;</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img">
-          <span class="tag tag-lime">House</span>
-          <img src="img/fiesta-house-valencia.webp" alt="Público bailando bajo luces en una fiesta house en Valencia" width="400" height="230">
-        </div>
-        <div class="card-body">
-          <time class="date" datetime="2025-11-07"><small>Vie</small><b>07</b><small>Nov</small></time>
-          <div>
-            <h3>The Martínez Brothers</h3>
-            <p class="place">Nave 73 · Valencia</p>
-            <p class="meta">House · 22:00 – 06:00</p>
-          </div>
-          <a href="eventos.html#martinez-brothers" class="go" title="Ver el evento de The Martínez Brothers en Valencia" aria-label="Ver evento de The Martínez Brothers">&rarr;</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img">
-          <span class="tag tag-purple">Indie</span>
-          <img src="img/concierto-indie-barcelona.webp" alt="Retrato en blanco y negro del artista indie Caribou" width="400" height="230">
-        </div>
-        <div class="card-body">
-          <time class="date" datetime="2025-11-15"><small>Sáb</small><b>15</b><small>Nov</small></time>
-          <div>
-            <h3>Caribou</h3>
-            <p class="place">Sala Apolo · Barcelona</p>
-            <p class="meta">Indie · 21:00 – 01:00</p>
-          </div>
-          <a href="eventos.html#caribou" class="go" title="Ver el concierto de Caribou en Barcelona" aria-label="Ver concierto de Caribou">&rarr;</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img">
-          <span class="tag tag-lime">Electrónica</span>
-          <img src="img/festival-electronica-bilbao.webp" alt="Sala industrial llena de público en un evento de música electrónica en Bilbao" width="400" height="230">
-        </div>
-        <div class="card-body">
-          <time class="date" datetime="2025-11-21"><small>Vie</small><b>21</b><small>Nov</small></time>
-          <div>
-            <h3>Nina Kraviz</h3>
-            <p class="place">The Warehouse · Bilbao</p>
-            <p class="meta">Techno · 23:30 – 07:00</p>
-          </div>
-          <a href="eventos.html#nina-kraviz" class="go" title="Ver el evento de Nina Kraviz en Bilbao" aria-label="Ver evento de Nina Kraviz">&rarr;</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="featured container" aria-labelledby="evento-destacado">
-    <figure class="featured-img">
-      <img src="img/clandestino-sessions-bilbao.webp" alt="Luces y público en Clandestino Sessions en The Warehouse de Bilbao" width="560" height="380">
-    </figure>
-
-    <article class="featured-info">
-      <p class="label">Evento destacado</p>
-      <h2 id="evento-destacado">Clandestino Sessions <span>Vol. 12</span></h2>
-      <p>Una noche, tres artistas, una misma energía. Vuelve nuestra serie de sesiones en The Warehouse con un <em>line up</em> de lujo.</p>
-      <ul class="details">
-        <li>&#128197; <time datetime="2025-11-21">21 Nov 2025</time></li>
-        <li>&#128205; The Warehouse · Bilbao</li>
-        <li>&#128339; 23:30 – 07:00</li>
-      </ul>
-      <a href="entradas.html" class="btn btn-sm" title="Comprar entradas para Clandestino Sessions Vol. 12">Comprar entradas &rarr;</a>
-    </article>
-
-    <aside class="features" aria-label="Por qué ClandestinoClub">
-      <div class="feature">
-        <span class="f-icon">&#9889;</span>
-        <div><h3>Line ups únicos</h3><p>Artistas emergentes y referentes de la escena.</p></div>
+      <div class="header-actions">
+        <a href="entradas.html" class="btn btn-sm" title="Comprar entradas para conciertos">Entradas</a>
+        <button class="icon-btn" aria-label="Abrir menú">&#9776;</button>
       </div>
-      <div class="feature">
-        <span class="f-icon">&#128101;</span>
-        <div><h3>Comunidad</h3><p>Gente real, música real, sin filtros.</p></div>
-      </div>
-      <div class="feature">
-        <span class="f-icon">&#127760;</span>
-        <div><h3>En toda España</h3><p>Madrid, Barcelona, Valencia, Bilbao y más.</p></div>
-      </div>
-    </aside>
-  </section>
-</main>
+    </div>
+  </header>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <a href="index.html" class="logo" title="ClandestinoClub, inicio">
-      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#8b5cf6"/></svg>
-      Clandestino<span>Club</span>
-    </a>
-    <nav aria-label="Navegación del pie">
-      <ul class="footer-nav">
-        <li><a href="index.html" title="Inicio">Inicio</a></li>
-        <li><a href="eventos.html" title="Eventos de música">Eventos</a></li>
-        <li><a href="artistas.html" title="Artistas y DJs">Artistas</a></li>
-        <li><a href="galeria.html" title="Galería de conciertos">Galería</a></li>
-        <li><a href="sobre-nosotros.html" title="Sobre nosotros">Sobre nosotros</a></li>
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container" style="background-image:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/sala-moon-valencia.webp); 
+        background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <p class="eyebrow">Conciertos <i>/</i> Fiestas <i>/</i> Cultura musical</p>
+        <h1>Clandestino<span>Club</span></h1>
+        <p class="hero-text">Descubre los mejores <strong>conciertos</strong>, fiestas y eventos de <strong>música
+            electrónica</strong>, indie, techno, house y mucho más. La escena underground, en un solo lugar.</p>
+        <a href="eventos.html" class="btn" title="Ver próximos conciertos y fiestas">Ver próximos eventos &rarr;</a>
+
+      </div>
+    </section>
+
+
+
+    <!--PROXIMOS EVENTOS -------------------------------------------------------------->
+    <section class="events container" aria-labelledby="proximos-eventos">
+      <div class="section-head">
+        <h2 id="proximos-eventos">Próximos <span>eventos</span></h2>
+        <a href="eventos.html" class="link-purple" title="Ver todos los eventos de música">Ver todos los eventos
+          &rarr;</a>
+      </div>
+      <!-- CARDS ----------------------------------1FILA------------------------------->
+      <div class="cards">
+        <!--ARTICULO-->
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-purple">J-pop</span>
+
+            <!--Imagen ------------ -->
+            <img src="img/figura-Hatsune-Miku-AMP.jpg" alt="DJ de techno pinchando en La Bodega Club de Madrid"
+              width="400" height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-01"><small>Sáb</small><b>01</b><small>Nov</small></time>
+            <div>
+              <h3>Hatsune Miku</h3>
+              <p class="place">El Sótano · Madrid</p>
+              <p class="meta">J-pop· 23:00 – 06:00</p>
+            </div>
+            <a href="eventos.html#rrose" class="go" title="Ver el evento de Rrose en Madrid"
+              aria-label="Ver evento de Rrose">&rarr;</a>
+          </div>
+        </article>
+
+        <!--ARTICULO-->
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-lime">Bedroom</span>
+
+            <!--Imagen ------------ -->
+            <img src="img/images (1).jpeg" alt="Público bailando bajo luces en una fiesta house en Valencia" width="400"
+              height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-07"><small>Vie</small><b>07</b><small>Nov</small></time>
+            <div>
+              <h3>Depresión Sonora</h3>
+              <p class="place">Omnio03 · Granada</p>
+              <p class="meta">Bedroom · 20:00 – 00:00</p>
+            </div>
+            <a href="eventos.html#martinez-brothers" class="go"
+              title="Ver el evento de The Martínez Brothers en Valencia"
+              aria-label="Ver evento de The Martínez Brothers">&rarr;</a>
+          </div>
+        </article>
+
+        <!--ARTICULO-->
+        <!--Imagen ------------ -->
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-purple">Synth Pop </span>
+            <img src="img/chvrches.jpg" alt="Retrato en blanco y negro del artista indie Caribou" width="400"
+              height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-15"><small>Sáb</small><b>15</b><small>Nov</small></time>
+            <div>
+              <h3>CHVRCHES</h3>
+              <p class="place">Sala Apolo · Barcelona</p>
+              <p class="meta">Synth Pop · 21:00 – 01:00</p>
+            </div>
+            <a href="eventos.html#caribou" class="go" title="Ver el concierto de Caribou en Barcelona"
+              aria-label="Ver concierto de Caribou">&rarr;</a>
+          </div>
+        </article>
+
+        <!--ARTICULO-->
+        <!--Imagen ------------ -->
+
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-lime">Country Rock</span>
+            <img src="img/dg-janet-vh_cc_121922_0400.webp"
+              alt="Sala industrial llena de público en un evento de música electrónica en Bilbao" width="400"
+              height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-21"><small>Vie</small><b>21</b><small>Nov</small></time>
+            <div>
+              <h3>Dallas Green</h3>
+              <p class="place">The Warehouse · Bilbao</p>
+              <p class="meta">Country Rock · 21:30 – 00:00</p>
+            </div>
+            <a href="eventos.html#nina-kraviz" class="go" title="Ver el evento de Nina Kraviz en Bilbao"
+              aria-label="Ver evento de Nina Kraviz">&rarr;</a>
+          </div>
+        </article>
+        <!-- CARDS -----------------------------2FILA------------------------------->
+        <!-- CARDS ----------------------------------------------------------------->
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-purple">Pop psicodélico</span>
+
+            <!--Imagen ------------ -->
+            <img src="img/011620-Tame-Impala-Chuff-Media-696x522.webp"
+              alt="DJ de techno pinchando en La Bodega Club de Madrid" width="400" height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-01"><small>Sáb</small><b>01</b><small>Nov</small></time>
+            <div>
+              <h3>Tame Impala</h3>
+              <p class="place">La Bodega Club · Madrid</p>
+              <p class="meta">Pop psicodélico · 23:00 – 06:00</p>
+            </div>
+            <a href="eventos.html#rrose" class="go" title="Ver el evento de Rrose en Madrid"
+              aria-label="Ver evento de Rrose">&rarr;</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-lime">Rancheras</span>
+
+            <!--Imagen ------------ -->
+            <img src="img/ad094639e39f-juan-gabriel1-t.webp"
+              alt="Público bailando bajo luces en una fiesta house en Valencia" width="400" height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-07"><small>Vie</small><b>07</b><small>Nov</small></time>
+            <div>
+              <h3>Juan Gabriel</h3>
+              <p class="place">Nave 73 · Valencia</p>
+              <p class="meta">Folklore · 20:00 – 00:00</p>
+            </div>
+            <a href="eventos.html#martinez-brothers" class="go"
+              title="Ver el evento de The Martínez Brothers en Valencia"
+              aria-label="Ver evento de The Martínez Brothers">&rarr;</a>
+          </div>
+        </article>
+
+        <!--ARTICULO SADE -->
+        <!--Imagen ------------ -->
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-purple">Soul - Jazz </span>
+            <img src="img/sade.jpg" alt="Retrato en blanco y negro del artista indie Caribou" width="400" height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-15"><small>Sáb</small><b>15</b><small>Nov</small></time>
+            <div>
+              <h3>SADE</h3>
+              <p class="place">Sala Joy · Madrod</p>
+              <p class="meta">Soul - Jazz · 21:00 – 01:00</p>
+            </div>
+            <a href="eventos.html#caribou" class="go" title="Ver el concierto de Caribou en Barcelona"
+              aria-label="Ver concierto de Caribou">&rarr;</a>
+          </div>
+        </article>
+
+        <!--Imagen ------------ -->
+
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-lime">DreamPop</span>
+            <img src="img/e12beaf7-87b4-459a-815e-a4c7674f4cbc.jpg"
+              alt="Sala industrial llena de público en un evento de música electrónica en Bilbao" width="400"
+              height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-21"><small>Vie</small><b>21</b><small>Nov</small></time>
+            <div>
+              <h3>Rojuu</h3>
+              <p class="place">The Prision · La cárcel</p>
+              <p class="meta">DreamPop · 21:30 – 00:00</p>
+            </div>
+            <a href="eventos.html#nina-kraviz" class="go" title="Ver el evento de Nina Kraviz en Bilbao"
+              aria-label="Ver evento de Nina Kraviz">&rarr;</a>
+          </div>
+        </article>
+
+        <!-- CARDS -----------------------------3FILA------------------------------->
+        <!-- CARDS ----------------------------------------------------------------->
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-purple">Pop psicodélico</span>
+
+            <!--Imagen ------------ -->
+            <img src="img/images.jpeg" alt="DJ de techno pinchando en La Bodega Club de Madrid" width="400"
+              height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-01"><small>Sáb</small><b>01</b><small>Nov</small></time>
+            <div>
+              <h3>Tame Impala</h3>
+              <p class="place">La Bodega Club · Madrid</p>
+              <p class="meta">Pop psicodélico · 23:00 – 06:00</p>
+            </div>
+            <a href="eventos.html#rrose" class="go" title="Ver el evento de Rrose en Madrid"
+              aria-label="Ver evento de Rrose">&rarr;</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-lime">Rancheras</span>
+
+            <!--Imagen ------------ -->
+            <img src="img/msipaulharries2.jpg" alt="Público bailando bajo luces en una fiesta house en Valencia"
+              width="400" height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-07"><small>Vie</small><b>07</b><small>Nov</small></time>
+            <div>
+              <h3>Juan Gabriel</h3>
+              <p class="place">Nave 73 · Valencia</p>
+              <p class="meta">Folklore · 20:00 – 00:00</p>
+            </div>
+            <a href="eventos.html#martinez-brothers" class="go"
+              title="Ver el evento de The Martínez Brothers en Valencia"
+              aria-label="Ver evento de The Martínez Brothers">&rarr;</a>
+          </div>
+        </article>
+
+
+        <!--Imagen ------------ -->
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-purple">Synth Pop </span>
+            <img src="img/placebo-lead-press-shot-credit-scarlet-page-1.jpg"
+              alt="Retrato en blanco y negro del artista indie Caribou" width="400" height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-15"><small>Sáb</small><b>15</b><small>Nov</small></time>
+            <div>
+              <h3>Placebo</h3>
+              <p class="place">Sala Apolo · Barcelona</p>
+              <p class="meta">Synth Pop · 21:00 – 01:00</p>
+            </div>
+            <a href="eventos.html#caribou" class="go" title="Ver el concierto de Caribou en Barcelona"
+              aria-label="Ver concierto de Caribou">&rarr;</a>
+          </div>
+        </article>
+
+        <!--Imagen ------------ -->
+
+        <article class="card">
+          <div class="card-img">
+            <span class="tag tag-lime">Country Rock</span>
+            <img src="img/she-wants-revenge-tickets_10-14-26_17_69fcd2de1f33d.png"
+              alt="Sala industrial llena de público en un evento de música electrónica en Bilbao" width="400"
+              height="230">
+          </div>
+          <div class="card-body">
+            <time class="date" datetime="2025-11-21"><small>Vie</small><b>21</b><small>Nov</small></time>
+            <div>
+              <h3>She Wants Revenge</h3>
+              <p class="place">The Warehouse · Bilbao</p>
+              <p class="meta">Country Rock · 21:30 – 00:00</p>
+            </div>
+            <a href="eventos.html#nina-kraviz" class="go" title="Ver el evento de Nina Kraviz en Bilbao"
+              aria-label="Ver evento de Nina Kraviz">&rarr;</a>
+          </div>
+        </article>
+
+
+        <!-- CARDS ----------------------------------------------------------------->
+
+
+      </div>
+    </section>
+
+    <!--CINTA DE CORREEEEEEER----------------------------------------------------->
+    <div class="cinta-noticias"></div>
+
+
+    <!--GANCHO APP --------------------------------------------------------------->
+    <div class="gancho">
+
+      <p>Disponible en todas las plataformas</p>
+
+      <h1>Descarga nuestra app y nunca estarás desconectado </h1>
+      <div class="header-actions">
+        <a  class="btn btn-sm" title="Descargar la app">Descárgala aquí</a>
+        <button class="icon-btn" aria-label="Abrir menú"></button>
+      </div>
+      </div>
+      
+
+      <div class="cinta-noticias"></div>
+   
+   <section class="events container" aria-labelledby="proximos-eventos">
+      <div class="section-head">
+        <h2 id="proximos-eventos">Eventos <span>Destacados</span></h2>
+        <a href="eventos.html" class="link-purple" title="Ver todos los eventos de música">Ver todos los eventos destacados
+          &rarr;</a>
+      </div>
+      </section>
+
+    
+
+
+      <!--EVENTOS DESTACADOS ---------------------------------------------------------------->
+
+    <section class="featured container" aria-labelledby="evento-destacado">
+
+
+      <figure class="featured-img">
+        <img src="img/chikawa.avif"
+          alt="Luces y público en Clandestino Sessions en The Warehouse de Bilbao" width="560" height="380">
+      </figure>
+
+      <article class="featured-info">
+        <p class="label">Evento destacado</p>
+        <h2 id="evento-destacado">CHIKAWA FRIENDS <span>Pop-Up Stores</span></h2>
+        <p>Chiikawa Starry Symphony, un espectacular concierto interactivo donde las canciones oficiales del anime cobrarán vida en un escenario <em> mágico.</em>
+          
+        </p>
+        <ul class="details">
+          <li>&#128197; <time datetime="2025-11-21">21 Nov 2025</time></li>
+          <li>&#128205; The Warehouse · Bilbao</li>
+          <li>&#128339; 23:30 – 07:00</li>
+        </ul>
+        <a href="entradas.html" class="btn btn-sm" title="Comprar entradas para Clandestino Sessions Vol. 12">Comprar
+          entradas &rarr;</a>
+      </article>
+
+      <aside class="features" aria-label="Por qué ClandestinoClub">
+        <div class="feature">
+          <span class="f-icon">&#9889;</span>
+          <div>
+            <h3>Line ups únicos</h3>
+            <p>Artistas emergentes y referentes de la escena.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="f-icon">&#128101;</span>
+          <div>
+            <h3>Comunidad</h3>
+            <p>Gente real, música real, sin filtros.</p>
+          </div>
+        </div>
+        <div class="featurse">
+          <span class="f-icon">&#127760;</span>
+          <div>
+            <h3>En toda España</h3>
+            <p>Madrid, Barcelona, Valencia, Bilbao y más.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <section class="featured container" aria-labelledby="evento-destacado">
+
+
+      <!--EVENTO DESTACADO 2---------------------------------------------------------->
+      <figure class="featured-img">
+        <img src="img/coubo.png"
+          alt="Luces y público en Clandestino Sessions en The Warehouse de Bilbao" width="560" height="380">
+      </figure>
+      
+
+      <article class="featured-info">
+        <p class="label">Evento destacado</p>
+        <h2 id="evento-destacado">COUBO<span>Selcouth</span></h2>
+        <p>Una noche, tres artistas, una misma energía. Vuelve nuestra serie de sesiones en The Warehouse con un
+          <em>line up</em> de lujo.
+        </p>
+        <ul class="details">
+          <li>&#128197; <time datetime="2025-11-21">21 Nov 2025</time></li>
+          <li>&#128205; The Warehouse · Bilbao</li>
+          <li>&#128339; 23:30 – 07:00</li>
+        </ul>
+        <a href="entradas.html" class="btn btn-sm" title="Comprar entradas para Clandestino Sessions Vol. 12">Comprar
+          entradas &rarr;</a>
+      </article>
+
+      <aside class="features" aria-label="Por qué ClandestinoClub">
+        <div class="feature">
+          <span class="f-icon">&#9889;</span>
+          <div>
+            <h3>Line ups únicos</h3>
+            <p>Artistas emergentes y referentes de la escena.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="f-icon">&#128101;</span>
+          <div>
+            <h3>Comunidad</h3>
+            <p>Gente real, música real, sin filtros.</p>
+          </div>
+        </div>
+        <div class="featurse">
+          <span class="f-icon">&#127760;</span>
+          <div>
+            <h3>En toda España</h3>
+            <p>Madrid, Barcelona, Valencia, Bilbao y más.</p>
+          </div>
+        </div>
+      </aside>
+      
+    </section>
+     <section class="featured container" aria-labelledby="evento-destacado">
+
+
+      <!--EVENTO DESTACADO 2---------------------------------------------------------->
+      <figure class="featured-img">
+        <img src="img/coubo.png"
+          alt="Luces y público en Clandestino Sessions en The Warehouse de Bilbao" width="560" height="380">
+      </figure>
+      
+
+      <article class="featured-info">
+        <p class="label">Evento destacado</p>
+        <h2 id="evento-destacado">COUBO<span>Selcouth</span></h2>
+        <p>Una noche, tres artistas, una misma energía. Vuelve nuestra serie de sesiones en The Warehouse con un
+          <em>line up</em> de lujo.
+        </p>
+        <ul class="details">
+          <li>&#128197; <time datetime="2025-11-21">21 Nov 2025</time></li>
+          <li>&#128205; The Warehouse · Bilbao</li>
+          <li>&#128339; 23:30 – 07:00</li>
+        </ul>
+        <a href="entradas.html" class="btn btn-sm" title="Comprar entradas para Clandestino Sessions Vol. 12">Comprar
+          entradas &rarr;</a>
+      </article>
+
+      <aside class="features" aria-label="Por qué ClandestinoClub">
+        <div class="feature">
+          <span class="f-icon">&#9889;</span>
+          <div>
+            <h3>Line ups únicos</h3>
+            <p>Artistas emergentes y referentes de la escena.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="f-icon">&#128101;</span>
+          <div>
+            <h3>Comunidad</h3>
+            <p>Gente real, música real, sin filtros.</p>
+          </div>
+        </div>
+        <div class="featurse">
+          <span class="f-icon">&#127760;</span>
+          <div>
+            <h3>En toda España</h3>
+            <p>Madrid, Barcelona, Valencia, Bilbao y más.</p>
+          </div>
+        </div>
+      </aside>
+      
+    </section>
+     <section class="featured container" aria-labelledby="evento-destacado">
+
+
+      <!--EVENTO DESTACADO 2---------------------------------------------------------->
+      <figure class="featured-img">
+        <img src="img/coubo.png"
+          alt="Luces y público en Clandestino Sessions en The Warehouse de Bilbao" width="560" height="380">
+      </figure>
+      
+
+      <article class="featured-info">
+        <p class="label">Evento destacado</p>
+        <h2 id="evento-destacado">COUBO<span>Selcouth</span></h2>
+        <p>Una noche, tres artistas, una misma energía. Vuelve nuestra serie de sesiones en The Warehouse con un
+          <em>line up</em> de lujo.
+        </p>
+        <ul class="details">
+          <li>&#128197; <time datetime="2025-11-21">21 Nov 2025</time></li>
+          <li>&#128205; The Warehouse · Bilbao</li>
+          <li>&#128339; 23:30 – 07:00</li>
+        </ul>
+        <a href="entradas.html" class="btn btn-sm" title="Comprar entradas para Clandestino Sessions Vol. 12">Comprar
+          entradas &rarr;</a>
+      </article>
+
+      <aside class="features" aria-label="Por qué ClandestinoClub">
+        <div class="feature">
+          <span class="f-icon">&#9889;</span>
+          <div>
+            <h3>Line ups únicos</h3>
+            <p>Artistas emergentes y referentes de la escena.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="f-icon">&#128101;</span>
+          <div>
+            <h3>Comunidad</h3>
+            <p>Gente real, música real, sin filtros.</p>
+          </div>
+        </div>
+        <div class="featurse">
+          <span class="f-icon">&#127760;</span>
+          <div>
+            <h3>En toda España</h3>
+            <p>Madrid, Barcelona, Valencia, Bilbao y más.</p>
+          </div>
+        </div>
+      </aside>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer"
+    style="background-image:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/564d011faa10b89f14276955c89f7fa2.jpg); background-size: cover; background-position: center;">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo" title="ClandestinoClub, inicio">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="#8b5cf6" />
+        </svg>
+        Clandestino<span>Club</span>
+      </a>
+      <nav aria-label="Navegación del pie">
+        <ul class="footer-nav">
+          <li><a href="index.html" title="Inicio">Inicio</a></li>
+          <li><a href="eventos.html" title="Eventos de música">Eventos</a></li>
+          <li><a href="artistas.html" title="Artistas y DJs">Artistas</a></li>
+          <li><a href="galeria.html" title="Galería de conciertos">Galería</a></li>
+          <li><a href="sobre-nosotros.html" title="Sobre nosotros">Sobre nosotros</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a href="https://instagram.com" rel="noopener nofollow" title="ClandestinoClub en Instagram"
+            aria-label="Instagram">IG</a></li>
+        <li><a href="https://x.com" rel="noopener nofollow" title="ClandestinoClub en X" aria-label="X">X</a></li>
+        <li><a href="https://spotify.com" rel="noopener nofollow" title="ClandestinoClub en Spotify"
+            aria-label="Spotify">SP</a></li>
+        <li><a href="https://youtube.com" rel="noopener nofollow" title="ClandestinoClub en YouTube"
+            aria-label="YouTube">YT</a></li>
       </ul>
-    </nav>
-    <ul class="social">
-      <li><a href="https://instagram.com" rel="noopener nofollow" title="ClandestinoClub en Instagram" aria-label="Instagram">IG</a></li>
-      <li><a href="https://x.com" rel="noopener nofollow" title="ClandestinoClub en X" aria-label="X">X</a></li>
-      <li><a href="https://spotify.com" rel="noopener nofollow" title="ClandestinoClub en Spotify" aria-label="Spotify">SP</a></li>
-      <li><a href="https://youtube.com" rel="noopener nofollow" title="ClandestinoClub en YouTube" aria-label="YouTube">YT</a></li>
-    </ul>
-  </div>
-  <div class="container footer-bottom">
-    <p>© 2025 ClandestinoClub. Todos los derechos reservados.</p>
-    <ul>
-      <li><a href="aviso-legal.html" title="Aviso legal">Aviso legal</a></li>
-      <li><a href="privacidad.html" title="Política de privacidad">Privacidad</a></li>
-      <li><a href="contacto.html" title="Contacto">Contacto</a></li>
-    </ul>
-  </div>
-</footer>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2025 ClandestinoClub. Todos los derechos reservados.</p>
+      <ul>
+        <li><a href="aviso-legal.html" title="Aviso legal">Aviso legal</a></li>
+        <li><a href="privacidad.html" title="Política de privacidad">Privacidad</a></li>
+        <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
+
 </html>
