@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mapita = new Map([
+            ["Salchicha", "Roberto"],
+            ["Mestizo", "Keka"],
+            ["Chiguagua", "Destructor"],
+            ["Papillon", "Orejitas"],
+            ["Doberman", "Princesa"]
+        ]);
+
+        // Array con las letras para ir buscando en orden
+        let abecedario = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+        for (let i = 0; i < abecedario.length; i++) {
+            let letraActual = abecedario[i];
+
+            for (let [raza, nombre] of mapita) {
+
+                if (nombre[0].toUpperCase() === letraActual) {
+                    document.write(`<p>${raza} --- ${nombre}</p>`);
+                }
+
+            }
+        }
+        
+    </script>
+</body>
+</html>

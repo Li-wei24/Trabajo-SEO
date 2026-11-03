@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const peliculas = [
+            {titulo: "violet Evergarden", director: "un japo 100%", anio: 2000, genero: "lloradera"},
+            {titulo: "La chiikawa pelicula", director: "un japo 100%", anio: 2026, genero: "autentico terror"},
+            {titulo: "No se me ocurre otra", director: "un bro", anio: 2026, genero: "inexistente lol"}
+        ];
+
+        const stringPeliculas = JSON.stringify(peliculas);
+        console.log(`Este es tu string: ${stringPeliculas}`);
+
+        const objPeliculas = JSON.parse(stringPeliculas);
+        
+        objPeliculas.forEach((peliculon) => {
+            console.log(`Titulo: ${peliculon.titulo}, Director: ${peliculon.director}, Año: ${peliculon.anio}, Genero: ${peliculon.genero}`);
+
+        });
+    </script>
+</body>
+</html>

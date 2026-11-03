@@ -1,0 +1,45 @@
+<!ELEMENT agenda (contacto+)>
+<!--Agenda en el xml es el padre de todo, no contiene datos como tal sino hijos, 
+    por lo que debemos de mencionar cuales son -->
+
+<!-- Debemos siempre indicar cual es el rango de cantidad de dichos hijos-->
+<!-- Ejemplo: 
+        contacto = 1
+        contacto+ = 1 o mas
+        contacto? = 0 o 1
+        contacto * = 0, 1 o mas--> 
+
+<!ELEMENT contacto (nombre, apellidos, movil*, email, sexo)>
+<!-- Revisamos todos los hijos de la etiqueta contacto y verificamos la posibilidad de verificacion-->
+
+<!-- Se indican la secuencia de elementos que deben aparecer o los elementos
+alternativos. Se utilizan las reglas siguientes: 
+
+         A, B indica que el elemento B aparecerá a continuación del A. 
+         A|B indica que aparecerá el elemento A o el elemento B pero no ambos.
+    
+    Se pueden combinar los símbolos de cardinalidad con los de secuencia. -->
+
+<!ATTLIST contacto codigo ID #REQUIRED>
+<!-- Sirve para introducir los atributos y de que tipo son, en este caso funciona como identificador y es 
+    obligatorio que todos los contactos lo tengan -->
+
+<!--Tipos de Atributos: 
+        1. CDATA = caracteres que no contienen etiquetas
+        2. ID = identificador unico para elementos
+        3. enumerado = lista de valores q user debe escoger uno
+            Ejemplo:
+            <!ATTLIST perro sexo (macho | hembra) "macho" #REQUIRED>
+            En este caso tenemos dos opciones d esexo que por defecto es macho y obligatoriamente aparecera asi hasta q se demuestre lo contrario-->
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT movil (#PCDATA)>
+<!ATTLIST movil nomEmpresa CDATA #IMPLIED>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT sexo (#PCDATA)>
+<!-- Estos a su vez pueden dejarse en blanco o sea obligatorio rellenarlo, esto lo hacemos a traves de: 
+    1. #REQUIRED atributo de caracter obligatorio sin valor por defecto
+    2. #IMPLIED opcional que no se da un valor por defecto
+    3. #FIXED indica que el atributo es obligatorio y se le asigna una valor por defecto -->
+
+<!-- PCDATA Significa que va a contener datos entre la etiqueta de apertura y cierre no etiquetas-->

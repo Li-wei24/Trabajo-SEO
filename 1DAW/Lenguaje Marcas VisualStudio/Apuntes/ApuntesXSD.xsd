@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!--Debemos de poner estas dos lineas de codio y su cierre para declarar la creacion de un xsd-->
+    
+    <xs:element name="agenda">
+    <!-- representa la existencia de un elemento
+        Atributos optativos:
+            name: indica el nombre del elemento. 
+            type: indica el tipo de elemento.
+            fixed: indica el único valor que puede contener el elemento. Exclusivamente textual
+            default: es el valor que tomará el elemento al ser procesado por alguna 
+            aplicacióncuando en el documento instancia XML no había recibido ningún valor.
+            minOccurs: indica el número mínimo de ocurrencias
+            maxOccurs: indica el número máximo de ocurrencias -->
+    
+        <xs:complexType>
+                <!--En este caso agenda tiene etiquetas hijas, por lo que es considerado un elemento de tipo 
+                compplejo aunque tambien sirve si tiene un atributo-->
+            <xs:sequence>
+            <!--Los modelos de contenido indican su distribucion que puede ser:
+                    1. Sequence (Secuencia): los elementos aparecen en fila
+                    2. Choice (Alternativa): Solo se puede escoger uno
+                    3. All (Todos): Los elementos aparecen en cualquier orden (No recomendado) -->
+                <xs:element name="contacto" minOccurs="1" maxOccurs="unbounded"> <!-- Unbounded: Significa que no tiene límite-->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="apellidos" type="xs:string"/>
+                            
+                            <!--Esta es la forma de declarar un atributo de una etiqueta-->
+                            <xs:element name="movil" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="nomEmpresa" type="xs:string" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="email" type="xs:string"/>
+                            <xs:element name="sexo" type="xs:string"/>
+                        </xs:sequence>
+                        
+                        <xs:attribute name="codigo" type="xs:ID" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

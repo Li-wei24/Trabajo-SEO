@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inicial = prompt("Introduce la inicial: ");
+        switch(inicial){
+            case "L":
+            case "l":
+                alert("10:00 - 13:00");
+                console.log("Lunes")
+                break;
+
+            case "M":
+            case "m":
+                alert("7:00 - 13:00");
+                console.log("Martes")
+                break;
+
+            case "X":
+            case "x":
+                alert("9:00 - 13:00");
+                console.log("Miercoles")
+                break;
+
+            case "J":
+            case "j":
+                alert("8:00 - 13:00");
+                console.log("Jueves")
+                break;
+
+            case "V":
+            case "v":
+                alert("10:00 - 12:00");
+                console.log("Viernes")
+                break;
+            
+            case "S":
+            case "s":
+                alert("-Cerrado-");
+                console.log("Sabado")
+                break;
+
+            case "D":
+            case "d":
+                alert("-Cerrado-");
+                console.log("Domingo")
+                break;
+
+            default:
+                console.log("Eso no es un día...")
+        }
+    </script>
+</body>
+</html>

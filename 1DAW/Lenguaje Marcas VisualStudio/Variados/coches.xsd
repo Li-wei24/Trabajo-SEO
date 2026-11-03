@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--Declaración del elemento, funciona para identificarlo-->
+    <xs:element name="coches" >
+        <!-- Elementos complejos
+         Son aquellos que contienen hijos y/o atributos-->
+        <xs:complexType>
+            <!-- Existen distintos tipos, como sequence, va a ser en el mismo orden del xml, 
+             all, en cualquier orden y no pueden aparecerse mas de una vez, 
+             choice, los elementos que escojamos del elemento padre,osea en el xml aunq se puede controlar con maxOccurs-->
+            <xs:sequence>
+                <!--Los elementos se refieren a cada uno de los nombres de los tags, se puede controlar 
+                las minimas o maximas veces necesarias que debe de ocurrir, unbounded es ilimitadas veces-->
+                <xs:element name="coche" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="marca">
+                            <!--Por ejemplo, vamos a poner una restriccion de la cantidad de caracteres que pueda tener la marca:-->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="20" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="modelo" type="xs:string" />
+                            <xs:element name="puertas" type="xs:int" />
+                            <xs:element name="color" type="xs:string" />
+                            <xs:element name="dia" type="xs:date" />
+                            <xs:element name="precio">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:restriction base="xs:double">
+                                            <xs:minInclusive value="1000.00" />
+                                            <xs:attribute name="venta" type="xs:string" default="nuevo" use="required"/>
+                                        </xs:restriction>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    <!--Pueden tener atributos, estos pueden ser fixed: si no lo pones pondra un valor por defecto, 
+                    pero si lo introduces t forzara a q tenga ese valor, default: si no introduces un valor ester pondra 
+                    uno automaticamente, pero si lo pones puedes poner lo q sea.
+                    Tambien podemos darle un uso, optional: es opcional introducirlo, required: totalemte obligatorio
+                    Siempre debemos introducir el nombre y tipo del atributo-->
+                    <xs:attribute name="matricula" type="xs:string" default="mat123" use="required"/>
+                    </xs:complexType>
+                </xs:element>    
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

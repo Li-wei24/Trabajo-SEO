@@ -1,0 +1,84 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE library SYSTEM "library.dtd">
+<!--La unica modificacion del dtd a sido para añadir una lengua mas-->
+<library>
+    <book id = "a1" language= "es">
+    
+        <title>Don Quijote de la Mancha</title>
+            <authors>
+                <author>
+                    <firstname>Miguel</firstname>
+                    <lastname>de Cervantes</lastname>
+                </author>
+            </authors>
+            <year>1605</year>
+            <isbn>978-84-241-1555-4</isbn>
+            <price currency="EUR">25.00</price>
+   
+    </book>
+
+    <book id = "a2" language= "en">
+    
+        <title>Coraline</title>
+            <authors>
+                <author>
+                    <firstname>Neil</firstname>
+                    <lastname>Gaiman</lastname>
+                </author>
+
+                <author>
+                    <firstname>otro</firstname>
+                    <lastname>otro</lastname>
+                </author>
+            </authors>
+            <year>2021</year>
+            <isbn>9788478885794</isbn>
+            <price currency="EUR">15.00</price>     
+    
+    </book>
+
+    <book id = "a3" language= "fr">
+    
+        <title>Persépolis</title>
+            <authors>
+                <author>
+                    <firstname>Marjane</firstname>
+                    <lastname>Satrapi</lastname>
+                </author>
+            </authors>
+            <year>2020</year>
+            <isbn>9788417910143</isbn>
+            <price currency="EUR">25.00</price>
+    
+    </book>
+
+    <book id = "a4" language= "jp">
+    
+        <title>My Wondering Warrior Existence</title>
+            <authors>
+                <author>
+                    <firstname>Nagata</firstname>
+                    <lastname>Kabi</lastname>
+                </author>
+            </authors>
+            <year>2022</year>
+            <isbn>9781648278822</isbn>
+            <price currency="EUR">12.00</price>    
+    
+    </book>
+
+    <book id = "a5">
+    
+        <title>Punguta Cu Doi Bani</title>
+            <authors>
+                <author>
+                    <firstname>Ion</firstname>
+                    <lastname>Ion Creanga</lastname>
+                </author>
+            </authors>
+            <year>1876</year>
+            <isbn>9786068578132</isbn>
+            <price currency="EUR">6.00</price>    
+    
+    </book>
+</library>

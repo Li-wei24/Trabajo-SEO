@@ -1,0 +1,14 @@
+<!--El signo + indica que como minimo se necesita un coche-->
+<!ELEMENT coches (coche+)> <!-- el * permite entre 0 y varias veces y + una o mas veces -->
+    <!--Aqui damos a conocer una etiqueta que almacenara otras-->
+    <!ELEMENT coche (marca,modelo,puertas,color,precio)> 
+    <!--Como llamar al atributo, pueden ser de distintos tipos, #required: obligatorio sin valor predeterminado, 
+    #implied: opcional, #fixed: obliga a que tenga el valor introducido-->
+    <!ATTLIST coche matricula CDATA #REQUIRED>
+    <!ELEMENT marca (#PCDATA)>
+    <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT puertas (#PCDATA)>
+    <!ELEMENT color (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!-- Solo hay dos opciones, y es obligatorio poner uno de los dos-->
+    <!ATTLIST precio venta (nuevo | ocasion) #REQUIRED>

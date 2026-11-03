@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:simpleType name="currencyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EUR"/>
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="GBP"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="priceType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="10"/>
+      <xs:fractionDigits value="2"/>
+      <xs:minInclusive value="0.00"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="invoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="invoiceNumber" type="xs:string"/>
+        <xs:element name="date" type="xs:date"/>
+        <xs:element name="seller" type="xs:string"/>
+        <xs:element name="buyer" type="xs:string"/>
+        <xs:element name="items">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="item" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="description" type="xs:string"/>
+                    <xs:element name="quantity" type="xs:positiveInteger"/>
+                    <xs:element name="unitPrice" type="priceType"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="subtotal" type="priceType"/>
+        <xs:element name="tax" type="priceType"/>
+        <xs:element name="total" type="priceType"/>
+      </xs:sequence>
+      <xs:attribute name="currency" type="currencyType" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

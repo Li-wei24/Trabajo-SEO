@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cadenitas = (cadena1, cadena2) => {
+            let cadenita1 = cadena1.split('');
+            let cadenita2 = cadena2.split('');
+
+            let vocales = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+            let contador1 = 0;
+            let contador2 = 0;
+            for (let i in cadenita1){
+                for (let j in vocales){
+                    if (cadenita1[i] === vocales[j]){
+                        contador1 ++;
+                    }
+                }
+            }
+
+            for (let k in cadenita2){
+                for (let l in vocales){
+                    if (cadenita2[k] === vocales[l]){
+                        contador2 ++;
+                    }
+                }
+            }
+
+            if (contador1 > contador2) {
+                console.log(`La cadena 1 tiene mas vocales: ${contador1} `)
+            }
+            
+            else if (contador2 > contador1) {
+                console.log(`La cadena 2 tiene mas vocales: ${contador2} `)
+            }
+
+            else {
+                console.log(`LOL empate...`)
+            }
+            
+        };
+        cadenitas('miaumiaumiau', 'nosequeponer');
+    </script>
+</body>
+</html>

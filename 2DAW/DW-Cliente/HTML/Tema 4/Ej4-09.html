@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const personas = [
+            { nombre: "Carlos", edad: 30 },
+            { nombre: "Ana", edad: 25 },
+            { nombre: "Luis", edad: 30 },
+            { nombre: "Bea", edad: 20 },
+            { nombre: "Diana", edad: 25 }
+        ];
+
+        personas.sort((a, b) => {
+            //Recuerda q usamos a y b con los sort para comparar numeros, esta en el libro
+            //En este caso como no hay minusculas no tenemos que dar muchas vueltas, con 
+            //comparaciones sencillas podemos hacerlo
+
+            //En este caso hay personas con la misma edad por lo que si son iguales tira 
+            //del nombre para ordenanrlas
+
+            if (a.edad !== b.edad){
+                return a.edad - b.edad;
+            }
+
+            if (a.nombre > b.nombre){
+                return 1;
+            }
+
+            if (b.nombre > a.nombre){
+                return -1;
+            }
+
+            return 0;
+        });
+
+        console.log(personas);
+
+    </script>
+</body>
+</html>

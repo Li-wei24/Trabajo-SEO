@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+  <event id="e001">
+    <title>Jornada de Tecnología</title>
+    <dateTime>2025-06-15T09:30:00</dateTime>
+    <location>
+      <city>Madrid</city>
+      <address>Calle Falsa 123</address>
+    </location>
+    <participants>
+      <participant>
+        <name>Ana García</name>
+        <role>speaker</role>
+      </participant>
+      <participant>
+        <name>Pedro Martín</name>
+        <role>attendee</role>
+      </participant>
+    </participants>
+    <notes>
+      Bienvenida y presentación.
+      <link href="https://example.org/program">Programa</link>
+    </notes>
+  </event>
+
+  <event id="e002">
+    <title>Taller de Escritura</title>
+    <dateTime>2025-07-01T16:00:00</dateTime>
+    <location>
+      <city>Barcelona</city>
+      <address>Avinguda Exemple 45</address>
+    </location>
+    <participants>
+      <participant>
+        <name>Lucía Pérez</name>
+        <role>organizer</role>
+      </participant>
+    </participants>
+    <notes>Sesión práctica; traer portátil.</notes>
+  </event>
+</events>

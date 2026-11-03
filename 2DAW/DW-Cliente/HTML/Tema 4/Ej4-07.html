@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function masaMaximaCamion(cereal){
+            let k = 0;
+            switch (cereal){
+                case `avena`:
+                    k = 1.8;
+
+                    break;
+                
+                case 'cebada':
+                    k = 1.4;
+                    
+                    break;
+
+                case 'maiz':
+                    k = 1.2;
+                    
+                    break;
+            }
+            return function(num){
+                return num * k;
+            }
+        }
+
+        var masaCamionAvena = masaMaximaCamion('avena');
+        var masaCamionCebada = masaMaximaCamion('cebada');
+        var masaCamionMaiz = masaMaximaCamion('maiz');
+
+        alert (masaCamionAvena (20));
+        alert (masaCamionCebada (20));
+        alert (masaCamionMaiz (20));
+    </script>
+</body>
+</html>

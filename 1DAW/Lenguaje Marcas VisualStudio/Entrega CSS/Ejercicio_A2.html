@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+			
+		<title>Ejercicio A2</title>
+		<style>
+			/* Ángels Salinas Tinizaray */
+
+			/* Selector universal para aplicar la fuente a todas las etiquetas*/
+			*{
+				font-family: 'Times New Roman', Times, serif;
+			}
+
+			/* Color base para todos los enlaces*/
+			a {
+				color: green;
+			}
+
+			/* id especifico para cambiar el tamaño de la fuente de la palabra derrotarle del texto*/
+			#prueba2{
+				font-size: xx-large;
+			}
+
+			/* Selector atrinuto que solo afecta a las etiquetas <b> que tengan una clase definida cambiandolas de color a rojo*/
+			b[class]{
+				color: red;
+			}
+
+			/* Color azul para todos los titulos*/
+			h3{
+				color: blue;
+			}
+
+			/* Clase especifica para crear el efecto de caja con solo líneas arriba y abajo sobre una unica palabra entiendo*/
+			span.prueba {
+				border-top: 1px solid black;    
+    			border-bottom: 1px solid black;
+    			padding: 1px 0;
+			}
+		</style>
+	</head>
+		<body>
+			<pre>
+En el momento en que <a href="https://ejemplo.com">entiendo verdaderamente</a> a mi <b class="enemigo">enemigo</b>, en el momento 
+en que le <span class="prueba">entiendo</span> lo suficientemente bien como para <span id="prueba2"><b>derrotarle</b></span>, 
+entonces, en ese preciso instante, 
+<h3>también le <b class="quiero"><u>quiero</u></b></h3>.
+			</pre>
+		</body>
+	</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let resultado = "";
+        let Usuario1 = ["Lectura", "Escritura", "Ejecucion"];
+        let Usuario2 = ["Lectura", "Escritura", "Escritura"];
+        let Usuario3 = ["Lectura", "Lectura", "Ejecucion"];
+        let Usuario4 = ["Lectura", "Escritura", "Ejecucion"];
+
+        let Usuarios = [Usuario1, Usuario2, Usuario3, Usuario4];
+
+        for (let i = 0; i < Usuarios.length; i++){
+            let permisos = Usuarios[i];
+            let setPermisos = new Set(permisos);
+
+            if (permisos.length === setPermisos.size){
+                document.write(`<p>No hay repetidos</p>`);
+            }
+
+            else {
+                document.write(`<p>Hay repetidos</p>`);
+            }
+        }
+        
+    </script>
+</body>
+</html>

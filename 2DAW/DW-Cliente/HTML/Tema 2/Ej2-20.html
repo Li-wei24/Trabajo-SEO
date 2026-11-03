@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let base = 0;
+        let altura = 0;
+        let radio = 0;
+        let resultado = 0;
+
+        let opcion = parseInt(prompt(`Vamos a calcular un area, escoge una opcion:
+        1) Triangulo
+        2) Rectagulo
+        3) Circulo
+        4) Salir`));
+
+        switch (opcion){
+            case 1:
+                base = parseInt(prompt('Inserta el valor de su base: '));
+                altura = parseInt(prompt('Inserta el valor de su altura: '));
+
+                resultado = (base * altura) / 2;
+
+                alert(`Esta es el area: ${resultado}`);
+
+                break;
+
+            case 2:
+                base = parseInt(prompt('Inserta el valor de su base: '));
+                altura = parseInt(prompt('Inserta el valor de su altura: '));
+
+                resultado = (base * altura);
+
+                alert(`Esta es el area: ${resultado}`);
+
+                break;
+
+            case 3:
+                radio = parseInt(prompt('Inserta el valor de su radio: '));
+
+                resultado = 3.14 * (radio * radio);
+
+                alert(`Esta es el area: ${resultado}`);
+
+                break;
+
+            case 4:
+
+                alert(`Saliendo de la carculadora...`);
+
+                break;
+
+            default:
+                alert('Esa no es una opcion...')
+        }
+    </script>
+</body>
+</html>

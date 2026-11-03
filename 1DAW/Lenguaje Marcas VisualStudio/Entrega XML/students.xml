@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE university SYSTEM "enrollment.dtd">
+<university>
+  <courses>
+    <course>
+      <courseCode>CS101</courseCode>
+      <title>Introducción a la Programación</title>
+      <credits>6</credits>
+    </course>
+    <course>
+      <courseCode>MA201</courseCode>
+      <title>Cálculo II</title>
+      <credits>5</credits>
+    </course>
+    <course>
+      <courseCode>HS150</courseCode>
+      <title>Historia Contemporánea</title>
+      <credits>4</credits>
+    </course>
+  </courses>
+
+  <students>
+    <student id="s1001">
+      <name>María López</name>
+      <email>maria.lopez@example.edu</email>
+      <enrollments>
+        <enrollment>
+          <courseCode>CS101</courseCode>
+          <semester>2025-1</semester>
+        </enrollment>
+        <enrollment>
+          <courseCode>MA201</courseCode>
+          <semester>2025-1</semester>
+        </enrollment>
+      </enrollments>
+    </student>
+
+    <student id="s1002">
+      <name>Carlos Ruiz</name>
+      <email>c.ruiz@example.edu</email>
+      <enrollments>
+        <enrollment>
+          <courseCode>HS150</courseCode>
+          <semester>2025-1</semester>
+        </enrollment>
+      </enrollments>
+    </student>
+  </students>
+</university>

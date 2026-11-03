@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Coche {
+            constructor(marca, modelo, anio) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.anio = anio;
+            }
+
+            pintar(nuevoColor) {
+                this.color = nuevoColor;
+            }
+        }
+
+        let listaCoches = [
+            new Coche("Ferrari", "Scaglietti", 2010),
+            new Coche("Porsche", "911", 2022)
+        ];
+
+        let colorElegido = prompt("Color para el coche Marca: " + listaCoches[0].marca + " - Modelo: " + listaCoches[0].modelo + " - Año de fabricación: " + listaCoches[0].anio);
+
+        listaCoches[0].pintar(colorElegido);
+
+        console.log(listaCoches);
+    </script>
+</body>
+</html>

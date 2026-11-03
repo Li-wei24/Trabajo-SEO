@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invoice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="invoice.xsd"
+         currency="EUR">
+         
+    <invoiceNumber>FAC-0000-0000</invoiceNumber>
+    <date>2026-04-24</date>
+    <seller>FruteriaBarrio S.L.</seller>
+    <buyer>Cristian Andrei</buyer>
+    
+    <items>
+        <item>
+            <description>Platano maduro</description>
+            <quantity>7</quantity>
+            <unitPrice>1.00</unitPrice>
+        </item>
+        <item>
+            <description>Guayaba</description>
+            <quantity>1</quantity>
+            <unitPrice>3.00</unitPrice>
+        </item>
+    </items>
+    
+    <subtotal>10.00</subtotal>
+    <tax>2.00</tax>
+    <total>12.00</total>
+</invoice>

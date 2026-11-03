@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mapaDNI = new Map([
+            ["50637232V", "Ángels"],
+            ["76328901G", "Keka"],
+            ["86306238H", "Perro"],
+            ["08372913B", "Sergio"],
+            ["73920183M", "Cinnamoroll"],
+            ["36283801A", "Chiikawa"],
+            ["92749283G", "Usagi"],
+            ["37328230Q", "Hachiware"],
+            ["02884937Z", "ShiSha"],
+            ["46383033P", "Momoga"]
+        ]);
+
+        for (personas of mapaDNI){
+            console.log(personas);
+        }
+
+        mapaDNI.set("86306238H", "Gato");
+
+        for (personas of mapaDNI){
+            console.log(personas);
+        }
+        
+    </script>
+    
+</body>
+</html>

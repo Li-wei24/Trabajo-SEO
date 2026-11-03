@@ -1,0 +1,47 @@
+/*Ángels Salinas Tinizaray*/
+
+/* Todos los parrafos de contenidos en el div texto1 estaran centrados*/
+#Texto1 p {
+	text-align: center;
+}
+
+/* Lo hacemos para que el texto se amolde a la imagen*/
+#Texto1 {
+	overflow: hidden;
+	text-align: justify;
+}
+
+/* Ajustamos la imagen a la derecha */
+#imagen1 {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+/*Le damos una anchura de 400px*/
+#imagen1 img {
+	width: 400px;
+}
+
+/* Todos los parrafos que esten en la div texto2 estaran centrados*/
+#texto2 p {
+    text-align: center;
+}
+
+/* Lo hacemos para que el texto se amolde a la imagen*/
+#texto2 {
+    overflow: hidden;
+    text-align: justify;
+}
+
+/*Configuramos la imagen a la izquierda*/
+#imagen2 {
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+/* Damos un grosor de 400px*/
+#imagen2 img {
+    width: 400px;
+}

@@ -1,0 +1,246 @@
+body{
+    background-color:greenyellow ;
+}
+h1 { /*Se refiere a todos los h1 y asi hasta el h4 se considera de tipo*/
+font-family: Arial;
+}
+
+h2 {
+font-family: Verdana; /*Se refiere a la familia de la fuente*/
+}
+
+h3 {
+font-family: Garamond;
+}
+
+h4 {
+font-family: 'Courier New', Courier, monospace;
+}
+
+/*Selector universal
+*{
+    color: #FF8000;
+    font-family: arial;
+
+}
+*/
+
+/*Selector descendiente*/
+ul li {font-weight:bold;
+    color:red;
+    font-size:25px;
+}
+
+/*Selector hijo*/
+ol > li {
+    color: blueviolet;
+}
+
+/*Selector de clase, comienza con punto*/
+.CodigoJava{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/*Selector id con hastag*/
+#Primero{
+    font-size: xx-large;
+
+}
+
+/*Pseudo-clases.
+Se usan para seleccionar elementos en función, no del código como hasta ahora, sino del
+comportamiento posterior del usuario (eventos).
+• :link. Se aplica a los enlaces nunca visitados.
+• :visited. Se aplica a los enlaces visitados al menos una vez.
+• :hover. Se aplica a un elemento sobre el que el usuario sitúa el ratón, pero sin hacer
+clic.
+• :active. Se aplica a los elementos que están siendo activados, por ejemplo al hacer
+clic izquierdo sobre un elemento.
+• :focus. Se aplica a un elemento que tiene el foco.*/
+a:link{
+    color: black;
+
+}
+
+a:visited{
+    color: blue;
+
+}
+
+a:hover{
+    color: green;
+
+}
+
+a:active{
+    color: red;
+
+}
+
+a:focus{
+    background-color: yellow;
+
+}
+
+/*Selectores para parrafos: 
+➢ :first-line. Se aplica a la primera línea de un texto.
+➢ :first-letter. Se aplica la primera letra de un texto.
+➢ :before. Sirve para generar texto antes del contenido de un elemento.
+➢ :after. Sirve para generar texto después del contenido de un elemento.
+*/
+
+p:first-line{
+    color: green;
+
+}
+
+h2:first-letter{
+    color: blue;
+
+}
+
+p:after {
+    content: " - Aloja more don"; color: red;
+
+}
+
+p:before {
+    content: "*. ";
+
+}
+
+/*1. Contenido (content): texto, imágenes, videos, listas, etc.
+2. Relleno (padding): espacio entre el contenido y el borde.
+3. Borde (border): línea que encierra completamente el contenido y su relleno.
+4. Imagen de fondo (background-image): si está presente es la imagen que se
+muestra detrás del contenido y el espacio de relleno.
+5. Color de fondo (background-color): es el color que se muestra por detrás del
+contenido y el espacio de relleno.
+6. Margen (margin): es el espacio libre entre la caja y las cajas adyacentes*/
+
+/*Vamos a editar la tabla en cuestion*/
+.Perro{
+    width: 200px;
+    height: 300px;
+    margin: 100px;
+    /*
+    Alternativa directa:
+        div img {
+        margin: .5em .5em .5em 1em;
+        }
+
+    */
+    padding: 10px;
+
+    border: 3px;
+
+    /*Puede ser tmb especifico como margin*/
+    border-color: brown;
+
+    /*Puden tener estilos*/
+    border-top-style: dashed;
+    border-right-style: double;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+
+    /*Podemos hacer que los bordes de celdas puedan colapsarse o ir x separado cada una*/
+    border-collapse: collapse
+
+
+   
+}
+
+.Perro td {
+  border: 3px solid brown;
+}
+
+/*El posicionamiento, se refiere con position, 
+puede ser estatico, con top,rigth, bottom, left
+
+Posicionamiento relative, top, right, bottom y 
+left, añadimos los pixeles necesarios para moverlo 
+a gusto pero es como si verdaderamente estuviera donde antes
+
+Posicionamiento absoluto, afecta al resto de cajas superponiendose, 
+verdaderamente se mueve, mismas propiedades que el resto
+
+Posicionamiento fixed se quedara siempre en pantalla, da igual lo q hagas
+
+Posicionamiento float, hace que el contenido se ajuste a el, si no queremos
+ eso aplicamos clear a el elemnto afectado
+*/
+
+/*Podemos afectar la visualizacion de las cajas: 
+• block: Para elementos que ocupan todo el ancho, como párrafos, encabezados y
+divisiones.
+• inline: Para elementos que se ajustan al contenido, como enlaces, imágenes y spans.
+• inline-block: Para elementos que necesitan un comportamiento como bloque pero
+dentro de un flujo de línea, como imágenes que se pueden alinear con texto.
+• flex: Para crear layouts flexibles y responsivos, donde los elementos se ajustan
+automáticamente al tamaño de la pantalla.
+• grid: Para crear layouts más complejos y estructurados, donde los elementos se
+organizan en una cuadrícula
+
+es un atrbuto de una etiqueta, tiene que ir acompañado de display :grid
+Por ejemplo:
+    .migrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; (Podemos ayudarnos de repeat si son muchas iguales, minmax si queremos un rango)
+        grid-template-rows: 50px 100px 40px 60px 120px;
+        column-gap: 1em;
+        row-gap: 1em;
+        justify-items: rigth;
+        justify-items: stretch;
+    }
+*/
+
+/*
+• text-align. Alineación horizontal.
+• line-height. Intelineado.
+• text-decoration. Decoración.
+• text-transform. Transformación.
+• text.shadow. Sombreado del texto.
+• vertical-align. Alineación vertical.
+• text-indent. Tabula las primeras líneas.
+• letter-spacing. Espaciado entre letras.
+• white-space. Tratamiento de los espacios en blanco.
+• word-spacing. Espaciado entre palabras.
+*/
+
+/*• Los valores gráficos son disc, circle y square.
+• Los valores numéricos están formados por decimal, decimal-leadingzero, lower-roman, upper-roman, armenian y georgian.
+• Por último, los valores alfanuméricos se controlan mediante lower-latin,
+lower-alpha, upper-latin, upper-alpha y lower-greek.
+esto se introduce en un style en el html
+
+si queremos tener una imagen en vez d todo eso: ul.ok { list-style-image: url("imagenes/ok.png"); }
+
+*/
+
+nav ul {
+    list-style: none; /* Eliminamos las viñetas de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block; /* Hacemos que cada elemento de la lista se muestre en línea */
+    margin: 0; /* Agregamos un margen entre cada elemento */
+    padding: 10px 20px;
+    background-color: #f1f1f1; /* Color de fondo opcional */
+}
+
+nav a {
+    text-decoration: none; /* Quitamos el subrayado del enlace */
+    color: #ec5e5e; /* Color del texto del enlace */
+    }
+
+nav li:hover {
+    background-color: #ddd;
+}
+
+
+
+
+
+

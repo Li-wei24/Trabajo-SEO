@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class dispositivo{
+            //atributos
+            cpu = ``;
+            ram = ``;
+            almacenamiento = ``;
+            ancho = ``;
+            alto = ``;
+            numCamaras = ``;
+
+            constructor (cpu, ram, alm, ancho, alto, numCam){
+                this.cpu = cpu;
+                this.ram = ram;
+                this.almacenamiento = alm;
+                this.ancho = ancho;
+                this.alto = alto;
+                this.numCamaras = numCam;
+            }
+
+            //metodos
+            toString(){
+                return `CPU: ${this.cpu}, RAM: ${this.ram}, Almacenamiento: ${this.almacenamiento}, Ancho: ${this.ancho} Alto: ${this.alto}, Numero camaras: ${this.numCamaras}`;
+            }
+
+        }
+
+        let pc = new dispositivo();
+        pc.cpu = `bn chingona`;
+        pc.ram = `bn chingona`;
+        pc.alm = `bn chingona`;
+        pc.ancho = `bn chingona`;
+        pc.alto = `bn chingona`;
+        pc.numCam = `bn chingona`;
+
+        console.log(pc.toString());
+
+        let telefono = new dispositivo();
+        telefono.cpu = `bn chingona`;
+        telefono.ram = `bn chingona`;
+        telefono.alm = `bn chingona`;
+        telefono.ancho = `bn chingona`;
+        telefono.alto = `bn chingona`;
+        telefono.numCam = `bn chingona`;
+
+        console.log(telefono.toString());
+
+        let tablet = new dispositivo();
+        tablet.cpu = `bn chingona`;
+        tablet.ram = `bn chingona`;
+        tablet.alm = `bn chingona`;
+        tablet.ancho = `bn chingona`;
+        tablet.alto = `bn chingona`;
+        tablet.numCam = `bn chingona`;
+
+        console.log(tablet.toString());
+
+        let portatil = new dispositivo();
+        portatil.cpu = `bn chingona`;
+        portatil.ram = `bn chingona`;
+        portatil.alm = `bn chingona`;
+        portatil.ancho = `bn chingona`;
+        portatil.alto = `bn chingona`;
+        portatil.numCam = `bn chingona`;
+
+        console.log(portatil.toString());
+
+        let perroBionico = new dispositivo();
+        perroBionico.cpu = `bn chingona`;
+        perroBionico.ram = `bn chingona`;
+        perroBionico.alm = `bn chingona`;
+        perroBionico.ancho = `bn chingona`;
+        perroBionico.alto = `bn chingona`;
+        perroBionico.numCam = `bn chingona`;
+
+        console.log(perroBionico.toString());
+    </script>
+</body>
+</html>

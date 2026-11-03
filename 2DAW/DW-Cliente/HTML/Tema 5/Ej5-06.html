@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const esImpar = (digito) => {
+            return parseInt(digito) % 2 !== 0;
+        };
+
+        const cadenaSoloImpares = (cadena) => {
+            for (let i = 0; i < cadena.length; i++) {
+                if (!esImpar(cadena.charAt(i))) {
+                    return false; 
+                }
+            }
+            return true; 
+        };
+
+        console.log(cadenaSoloImpares("13579")); 
+        console.log(cadenaSoloImpares("1349"));
+    </script>
+</body>
+</html>

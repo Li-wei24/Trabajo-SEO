@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        Array.prototype.shuffle = function() {
+            //Recorremos el array desde el ultimo elemento hasta el segundo
+            for (let i = this.length - 1; i > 0; i--) {
+                
+                //Elegimos un indice aleatorio j entre 0 y la posición actual 'i'
+                const j = Math.floor(Math.random() * (i + 1));
+                
+                //Intercambiamos los elementos usando los indices del array (this)
+                const temporal = this[i];
+                this[i] = this[j];
+                this[j] = temporal;
+            }
+            
+            // Devolvemos el array modificado
+            return this;
+        };
+
+
+        let letras = ["a", "b", "c", "d", "e"];
+
+        letras.shuffle();
+
+        console.log(letras); 
+    </script>
+</body>
+</html>

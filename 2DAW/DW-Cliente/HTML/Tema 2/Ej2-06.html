@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nivel = parseInt(prompt("Introduce un numero del 1 al 6 para el encabezado:"));
+
+        if (nivel >= 1 && nivel <= 6) {
+            document.write("<h" + nivel + ">Encabezado de tamaño h" + nivel + "</h" + nivel + ">");
+        
+        } 
+        
+        else {
+            document.write("<p style='color: red;'>No existe ese tipo de encabezado! </p>");
+        
+        }
+    </script>
+</body>
+</html>

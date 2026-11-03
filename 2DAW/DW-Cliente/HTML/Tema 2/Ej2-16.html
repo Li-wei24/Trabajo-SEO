@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("Numero a adivinar: "));
+        let num2 = parseInt(0);
+        do {
+            num2 = prompt("Inserta un numero: ");
+
+            if (num2 < num){
+                alert("Esta chiquito...");
+
+            }
+
+            else if (num2 > num){
+                alert("Ta mayor...");
+
+            }
+        } while(num != num2)
+
+        alert("Lo adivinaste!");
+    </script>
+</body>
+</html>

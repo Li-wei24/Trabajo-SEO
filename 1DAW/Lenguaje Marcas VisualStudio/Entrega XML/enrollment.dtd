@@ -1,0 +1,18 @@
+<!ELEMENT university (courses, students)>
+
+<!ELEMENT courses (course+)>
+<!ELEMENT course (courseCode, title, credits)>
+<!ELEMENT courseCode (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT credits (#PCDATA)>
+
+<!ELEMENT students (student+)>
+<!ELEMENT student (name, email, enrollments)>
+<!ATTLIST student id ID #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT enrollments (enrollment+)>
+<!ELEMENT enrollment (courseCode, semester)>
+<!ELEMENT semester (#PCDATA)>

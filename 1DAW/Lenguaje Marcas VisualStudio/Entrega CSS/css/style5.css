@@ -1,0 +1,65 @@
+/* Ángels Salinas Tinizaray */
+
+/* Configuración del contenedor principal de la página
+Ocupa el 80% del ancho de la ventana del navegador y evita que el contenedor crezca más de 950px*/
+#contenedor {
+    width: 80%;
+    max-width: 950px;
+}
+
+/* Estilos para la cabecera que da el tamaño de fuente y la separacion */
+#cabecera {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Contenedor del menu que define la sepacion del bloque  */
+#menu {
+    margin-bottom: relative;
+}
+
+/* Para crear el menu quitamos el margen relleno y los puntos tipicos de una lista*/
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Da estilos para los elementos de la lista haciendo que se vea en horizontal con margen de 10px*/
+#menu li {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Estilos para los enlaces del menu le quita lo subrayado y le da color azul*/
+#menu a {
+	text-decoration: none;
+	color: blue;
+}
+
+/* Si pone el cursor sobre los enlaces cambian de color a negro y da un espacio extra */
+#menu a:hover {
+    padding: 8px;
+	color: black;
+}
+
+/* Establece el color gris del fondo y determina la configuracion del borde y su color*/
+#contenido {
+    background-color: gray;
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
+}
+
+/* Para todos los h2 de clase articulo seran de estilo verdana con color rojo*/
+.articulo h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+}
+
+/* dentro de la clase articulo, todos los parrafos seran blancos*/
+.articulo p {
+    color: white;
+}
+
+

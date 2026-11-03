@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Realiza una función que nos diga si una cadena es un palíndromo
+        (Utilizando los métodos de String).
+        ✗ Un palíndromo es una frase que puede leerse tanto del derecho como del
+        revés.
+        ✗ Ejemplos de palíndromos son:
+        • ana lleva al oso la avellana
+        • sale el as
+        • isaac no ronca asi
+        • luz azul*/
+
+        const esPalindromo = (cadena) => {
+            let resultado = "";
+            let esPalindromo = false;
+            let cadenaLimpia = cadena.toLowerCase().replace(" ", "");
+
+            for (let i = cadenaLimpia.length -1; i >= 0; i--){
+                resultado += cadenaLimpia.charAt(i);
+            }
+
+            if (resultado == cadenaLimpia){
+                esPalindromo = true;
+            }
+
+            else {
+                esPalindromo = false;
+            }
+
+            let mensaje = `Es palindromo? ${esPalindromo}`;
+
+            return mensaje;
+        }
+
+        let cadena = prompt('Introduce una cadena: ');
+        alert(esPalindromo(cadena));
+    
+    </script> 
+</body>
+</html>

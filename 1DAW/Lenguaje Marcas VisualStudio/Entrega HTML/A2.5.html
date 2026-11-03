@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+                <p>Usuario: 
+                    <label for="usuario" accesskey="u">
+                    <input type="text" size="20" maxlength="12" tabindex="1">
+                </label></p>
+
+                <p>Contraseña: 
+                    <label for="contraseña" accesskey="c">
+                    <input type="password" size="12" maxlength="12" tabindex="2">
+                </label></p>
+
+                <p>Servicio: 
+                    <label for="Servicio" accesskey="s">
+                    <select id="Servicio" tabindex="3">
+                        <option value="http">HTTP</option>
+                        <option value="ftp" selected>FTP</option>
+                        <option value="file">FILE</option>
+                    </select>
+                </label></p>
+
+                <p>Enviar: 
+                    <input type="image" id="imagen" accesskey="e" src="Imagenes/enviar.png" width="25" height="20" tabindex="4">
+                </p>
+                
+        </fieldset>
+    </form>
+</body>
+</html>

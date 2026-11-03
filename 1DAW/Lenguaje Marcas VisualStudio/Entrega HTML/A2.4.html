@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form>
+        
+        <p>Nombre:
+            <label for="nombre">
+            <input type="text" >
+        </label></p>
+
+        <p>Apellido: 
+            <label for="apellido">
+            <input type="text">
+        </label></p>
+
+        <p>Correo: 
+            <label for="correo">
+            <input type="email">
+        </label></p>
+
+        <p>Contraseña: 
+            <label for="contraseña">
+            <input type="password">
+        </label></p>
+
+        <p>Confirma contraseña: 
+            <label for="contraseña">
+            <input type="password">
+        </label></p>
+        
+        <p>Sexo: 
+            <label>
+            <select id="sexo">
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+                <option value="no binario">No binario</option>
+                <option value="no responder">No responder</option>
+            </select>
+        </label></p>
+        
+        <p><b>Aficiones: </b>
+            <input type="checkbox" value="videojuegos">
+                <label>Videojuegos</label>
+            <input type="checkbox" value="musica">
+                <label>Musica</label>
+            <input type="checkbox" value="cine">
+                <label>Cine</label>
+            <input type="checkbox" value="viajar">
+                <label>Viajar</label>
+        </p>
+
+        <p>País
+            <label>
+            <select id="pais">
+                <option value="españa" selected>España</option>
+                <option value="portugal">Portugal</option>
+                <option value="francia">Francia</option>
+            </select>
+        </label></p>
+
+        <p>Color favorito: 
+            <label>
+            <select id="favcolor" multiple size="2">
+                <option value="rojo" selected>Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="azul" selected>Azul</option>
+            </select>
+        </label></p>
+
+        <p>Subir foto: 
+            <label for="foto">
+            <input type="file" id="foto">
+        </label></p>
+
+        <p>
+            <textarea id="comentarios" cols="40" rows="5">Escriba aquí sus comentarios</textarea>
+        </p>
+        
+        <button type="reset">Resetear</button>
+
+        <button type="button" disabled>Modificar datos del usuario</button>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

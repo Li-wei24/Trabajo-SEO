@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let palabraUser = prompt('Escribe una palabra (ej. corazón):');
+
+        let arrayLetras = palabraUser.split('');
+
+        const quitarTildes = (array) => {
+            const letrasConTilde = "áéíóúÁÉÍÓÚ";
+
+            return array.filter((caracter) => {
+                return !letrasConTilde.includes(caracter);
+            });
+        };
+
+        let resultado = quitarTildes(arrayLetras);
+        console.log(resultado);
+    </script>
+</body>
+</html>

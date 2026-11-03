@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Ángels Salinas Tinizaray -->
+<head>
+    <title>Formulario de Alta Móvil (Grid)</title>
+
+    <style type="text/css">
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        .formulario-grid {
+            padding: 3%;
+            position: relative;
+            left: 200px;
+            display: grid;
+            grid-template-columns: 150px 3fr 1fr;
+            grid: 10px;
+            width: 1100px;
+            height: 500px;
+            background-color: rgb(248, 240, 230);
+            border-radius: 2%;
+            position: relative;
+
+        }
+
+        input {
+            width: auto;
+            border-color: rgb(194, 194, 194);
+            border: 1.5px solid #d1d1d1;
+            border-radius: 8px;      
+            padding: 10px 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        label {
+            text-align: right;
+            
+        }
+
+        select {
+            grid-column: 2 / 3;
+            border: 1.5px solid #d1d1d1;
+            border-radius: 8px;      
+            padding: 10px 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        span {
+            color: rgb(190, 190, 183);
+        }
+
+        #contratar {
+            grid-column: 3 / 4;
+        }
+
+        #tarifa {
+            grid-column: 2 / 4;
+        }
+
+        #migracion {
+            position: relative;
+            right: 335px;
+            border: 1.5px solid #d1d1d1;
+            border-radius: 8px;      
+            padding: 10px 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Alta Servicio de Telefonía Móvil</h1>
+
+    <form class="formulario-grid">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <span>* Obligatorio</span>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+        <span></span>
+
+        <label for="dni">DNI/NIE:</label>
+        <input type="text" id="dni" name="dni" required>
+        <span>* 8 dígitos y letra</span>
+
+        <label for="calle">Calle:</label>
+        <input type="text" id="calle" name="calle" required>
+        <span></span>
+
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero" required>
+        <span></span>
+
+        <label for="otros">Piso/Puerta/Otros:</label>
+        <input type="text" id="otros" name="otros">
+        <span>(Opcional)</span>
+
+        <label for="cp">Código Postal:</label>
+        <input type="text" id="cp" name="cp" required>
+        <span></span>
+
+        <label for="municipio">Municipio:</label>
+        <input type="text" id="municipio" name="municipio" required>
+        <span></span>
+
+        <label for="provincia">Provincia:</label>
+        <input type="text" id="provincia" name="provincia" required>
+        <span></span>
+
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" required>
+        <span></span>
+
+        <label for="migracion">Migrar número de teléfono actual:</label>
+        <input type="checkbox" id="migracion" name="migracion">
+        <span></span>
+
+        <label for="tarifa">Seleccione Tarifa:</label>
+        <select id="tarifa" name="tarifa" required>
+            <option value="" disabled selected>-- Elige una Tarifa --</option>
+            <option value="T1">Tarifa Plana Básica (10 GB)</option>
+            <option value="T2">Tarifa Familiar (50 GB)</option>
+            <option value="T3">Tarifa Ilimitada (Premium)</option>
+            <option value="T4">Tarifa Joven (20 GB)</option>
+            <option value="T5">Tarifa Empresa (Alto Consumo)</option>
+        </select>
+
+        <button type="submit" id="contratar">Contratar Servicio</button>
+    </form>
+</body>
+
+</html>

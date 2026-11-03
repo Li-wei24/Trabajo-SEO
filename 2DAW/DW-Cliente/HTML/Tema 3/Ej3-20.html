@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const accesos = [
+    { usuario: 'Eva', hora: '10:00' },
+    { usuario: 'Luis', hora: '11:00' },
+    { usuario: 'Eva', hora: '12:30' },
+    { usuario: 'Carlos', hora: '13:00' }
+];
+
+const accessLogByUser = (registros) => {
+    // 1. Creamos un Map vacío donde guardaremos el historial agrupado
+    const historialMap = new Map();
+
+    // 2. Recorremos cada objeto del array de accesos
+    for (const registro of registros) {
+        const usuario = registro.usuario;
+        const hora = registro.hora;
+
+        // 3. Si el usuario todavia no está en nuestro Map, le creamos su espacio con un array vacío
+        if (!historialMap.has(usuario)) {
+            historialMap.set(usuario, []);
+        }
+
+        // 4. Buscamos el array de ese usuario y le añadimos (hacemos push) la nueva hora
+        historialMap.get(usuario).push(hora);
+    }
+
+    // 5. Devolvemos el Map ya completo
+    return historialMap;
+    
+    };
+
+    const historial = accessLogByUser(accesos);
+    console.log(historial);
+    // ➞ Map { 'Eva' => ['10:00', '12:30'], 'Luis' => ['11:00'], 'Carlos' => ['13:00'] }
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes de HTML y CSS</title>
+    <link rel="stylesheet" href="ApuntesHTMLyCSS.css"> <!-- Enlace a un archivo CSS externo -->
+</head>
+
+<html>
+<body>
+    <!--Para poner titulos, cuanto mas alto el numero mas pequeño-->
+    <h1 name="h">Apuntes de HTML y CSS</h1>
+    <h2>Apuntes de HTML y CSS</h2>
+    <h3>Apuntes de HTML y CSS</h3>
+    <h4>Apuntes de HTML y CSS</h4>
+
+    <!--Para introducir parrafo-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio sit sed itaque, quia repellat minus iste exercitationem commodi possimus dolores consectetur quam vel. Provident dolor qui rem corporis sit?</p>
+
+    <!--Saltos de linea-->
+    <br>
+
+    <!--Imprime una linea-->
+    <hr>
+
+    <!--Estilos de fuente:-->
+    <b id="Primero">Kiki</b>
+    <i>Kiki</i>
+    <big>Kiki</big>
+    <small>Kiki</small>
+    <s>Kiki</s>
+    <strike>Kiki</strike>
+    <tt>Kiki</tt>
+    <u>Kiki</u>
+
+    <!--Muestra el codigo literalmente como se inserte-->
+    <pre class="CodigoJava">//Para buscar un elemnto en la tabla que devuelve el indice 
+        //donde esta o un valor negativo si no esta
+        //Ejemplo, buscar elemento en la tabla t
+        int pos = Arrays.binarySearch(t, 19);
+        if (pos >= 0){
+            System.out.println("Se encontro en la posicion: " + pos);
+        }
+
+        else{
+            System.out.println("No se encontro el elemento!");
+
+        }</pre>
+
+    <!--Listas de elemntos no ordenados, es decir con un puntito-->
+    <ul>
+        <li>Kiki1</li>
+        <li>Kiki2</li>
+        <li>Kiki3</li>
+    </ul>
+
+    <!--Listas de elemntos ordenados, es decir con numeros-->
+    <ol>
+        <li>Kiki1</li>
+        <li>Kiki2</li>
+        <li>Kiki3</li>
+    </ol>
+
+    <!--Pueden ser anidadas-->
+    <ol>
+        <li><b>Paginas web</b>
+            <ul>
+                <li>HTML</li>
+                <li>XHTML</li>
+            </ul>
+        </li>
+        
+        <li><b>Moviles</b>
+            <ul>
+                <li>WML</li>
+                <li>XHTML MP</li>
+            </ul>
+        </li>
+
+    <!--Enlaces, pueden llevarte a un punto de la pagina usando un name o href-->
+    <a href="#h"></a>
+
+    <!--Enlaces, pueden llevarte a otro fichero pasandole la ruta relativa-->
+    <a href="Entrega CSS/Ejercicio_A7.html">Fichero Ejercicio7</a>
+
+    <!--Enlaces, pueden llevarte a otra pagina-->
+    <a href="https://youtube.com"></a>
+
+    <!--Podemos dividir la info en bloques y darle atributos con: -->
+    <!--• left, top y position para la posición en pantalla.
+        • width y height para ancho y alto.
+        • z-index para ordenar el solapamiento.
+        • visibility para mostrar u ocultar.
+        • background-color, etc-->
+    <div>
+        <pre>//STRINGS Y CHAR
+        //Nos permite saber si es un digito, eso lo hacemos 
+        // incorporandolo a un boolean para luego imprimirlo (true / false)
+        char c1 = '2', c2 = 'p', c3 = 'A', c4 = ' ';
+        boolean esUnDigito = Character.isDigit(c1);
+        System.out.println("Es un digito?: " + esUnDigito);</pre>
+    </div>
+
+    <!--Permite identificar un elemento en linea asignandole nombre estilo clase y mas-->
+    <span style = "font-size: 16pt"> 16 tamaño de letra | </span>
+    <span style = "font-style: italic"> Cursiva | </span>
+    <span style = "font-weight: bold"> Bold | </span>
+
+    <!--Para introducir imagenes: -->
+    <img src="Entrega CSS/img/imagen1.jpg" alt="hola esto es una imagen">
+
+    <!--Para crear una tabla, tienen un borde (que es el que va x fuera, 
+    cellspacing que especifica el espacio entre celdas y cellpading que es 
+    el ancho entre el contenido y su borde de celsa): -->
+    <img src="Entrega CSS/img/Captura de pantalla 2026-01-19 223006.pngS" alt="">
+
+    <table class="Perro">
+        <tr> <!--Columna-->
+            <td>perro</td> <!--Filas-->
+            <td>perro</td>
+            <td>perro</td>
+        </tr>
+
+        <tr>            
+            <td>perro</td>
+            <td>perro</td>
+            <td>perro</td>
+        </tr>
+
+        <tr>            
+            <td>perro</td>
+            <td>perro</td>
+            <td>perro</td>
+        </tr>
+        
+    </table>
+
+    <!--- align. alineamiento del texto (left, right, center, justify)
+        - valign. posición vertical de los datos (top, middle, bottom, baseline)
+        - axis. indica la categoría a la que pertenece la celda
+        - headers. indica mediante una lista las celdas que son encabezados
+        - scope. indica las celdas de encabezado mediante row, col, rowgroup y
+        colgroup
+        - rowspan. indica el número de filas que ocupa la celda (combinar filas)
+        - colspan. indica el número de columnas que ocupa la celda (combinar columnas)-->
+
+    <!--Para introducir elementos multimedia como: -->
+    <!--Introduce una preview de una pagina X-->
+    <iframe src="Entrega CSS/Ejercicio_A3.html" frameborder="3"></iframe>
+
+    <!--Para hacer formularios: -->
+    <form action="">
+        <input type="text" name="Texto" id="" maxlength="50"> <!--Establece un maximo de caracteres-->
+        <input type="password" name="Texto" id="">
+        <input type="checkbox" name="Texto" id="" checked> <!--Marca la casilla por defecto-->
+        <input type="radio" name="Texto" id="" checked> <!--Marca la casilla por defecto-->
+        <input type="radio" name="Texto" id="">
+        <input type="submit" name="Texto" id="">
+        <input type="reset" name="Texto" id="">
+        <input type="file" name="Texto" id="">
+        <input type="hidden" name="Texto" id="">
+        <input type="image" name="Texto" id="" src="Entrega CSS/img/imagen2.png">
+        <input type="button" name="Texto" id="">
+
+        <button type="submit">
+            <!--Podemos poner una imagen aqui-->
+        </button> <!--Inserta un boton con mas formato-->
+
+        <select name="" id=""> <!--Insertar una lista de seleccion-->
+            <optgroup label="Favorites A-C"></optgroup> <!--Define grupos de opciones-->
+                <option value="American">American flamingo</option> <!--Indica cada opcion-->
+                <option value="Greater">Greater flamingo</option>
+                <option value="Lesser">Lesser flamingo</option>
+            </optgroup>
+        </select> 
+    </form>
+
+    <form>
+        <fieldset> <!--Agrupa los controles y sus titulos por temas-->
+            <legend>Personal Information</legend> <!--Asigna un rotulo a un fieldset-->
+            <label for="name">Name</label><br> <!--Sirve para asignar un titulo a un control-->
+            <input name="name" id="name"><br>
+            <label for="dob">Date of Birth<label><br>
+            <input name="dob" id="dob" type="date">
+        </fieldset>
+    </form>
+
+    <!--Esto sera un menu, se mete en un nav para referirse en concreto a el-->
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

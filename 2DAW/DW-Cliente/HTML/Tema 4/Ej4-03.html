@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function adivina(palabra){
+            let palabrita = palabra.split('');
+            
+            let user = prompt('Inserta todas letras que creas que son:')
+            let userLetras = user.split('');
+            let stringFinal = '';
+
+            //Como ahora son arrays solo me queda compararlos i guess xd
+
+            for (let i in palabrita) {
+                if (userLetras.includes(palabrita[i])) {
+                    stringFinal += palabrita[i];
+                } 
+                
+                else {
+                    stringFinal += '-';
+                }
+            }
+            
+            if (stringFinal == palabra){
+                document.write(`<h2>La has adivinado!</h2>`);
+                document.write(`<p>La palabra era: ${stringFinal}</p>`);
+            }
+
+            else {
+                document.write(`<h2>No la has adivinado...</h2>`);
+                document.write(`<p>Tu resultado fue: ${stringFinal}</p>`);
+            }
+            
+        }
+
+        adivina('keka');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function jugar(rondas = 5){
+            let dado1 = 0;
+            let dado2 = 0;
+
+            let jugadores = [];
+
+            let puntosJugador1 = 0;
+            for (let i = 0; i < rondas; i++){
+                dado1 = Math.floor(Math.random()*6) +1;
+                dado2 = Math.floor(Math.random()*6) +1;
+                puntosJugador1 += (dado1 + dado2);
+                
+            }
+
+            jugadores[0] = puntosJugador1;
+
+            let puntosJugador2 = 0;
+            for (let j = 0; j < rondas; j++){
+                dado1 = Math.floor(Math.random()*6) +1;
+                dado2 = Math.floor(Math.random()*6) +1;
+                puntosJugador2 += (dado1 + dado2);
+            }
+            
+            jugadores[1] = puntosJugador2;
+
+            if (jugadores[0] > jugadores[1]){
+                console.log(`Jugador 1 gana con ${jugadores[0]} pts`);
+            }
+
+            else if (jugadores[0] < jugadores[1]){
+                console.log(`Jugador 2 gana con ${jugadores[1]} pts`);
+
+            }
+
+            else{
+                console.log('Empate xd')
+            }
+        }
+
+        jugar(10);
+
+    </script>
+</body>
+</html>

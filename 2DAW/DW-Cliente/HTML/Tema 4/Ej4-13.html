@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let headers = ['name', 'city', 'gift']; 
+                
+        let mayusculas = (headers, indice = 0) => {
+            if (indice === headers.length){
+                return;
+            }
+
+            headers[indice] = headers[indice].charAt(0).toUpperCase() + headers[indice].slice(1);
+
+            mayusculas(headers, indice + 1);
+        }
+
+        mayusculas(headers);
+        console.log(headers); 
+    </script>
+</body>
+</html>

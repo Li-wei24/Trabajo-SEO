@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numUser = parseInt(prompt('Dame un numero de varias cifras: '));
+        let operacion = (numUser, resultado = 0) => {
+            if (numUser === 0){
+                return resultado;
+            }
+
+            //Esto es para ir sumando cada digito, pero si no hacemos la otra linea siempre 
+            //vamos a estar sumando el mismo  numero, por lo que con lo otro al dividirlo 
+            //con / obtenemos el numero de antes y con math floor lo quitamos para que en 
+            //la siguiente ronda solo nos queden el resto de numeros
+            
+            resultado += numUser % 10;
+            numUser = Math.floor(numUser / 10);
+
+            return operacion (numUser, resultado);
+        }
+
+        console.log(operacion(numUser));
+    </script>
+</body>
+</html>

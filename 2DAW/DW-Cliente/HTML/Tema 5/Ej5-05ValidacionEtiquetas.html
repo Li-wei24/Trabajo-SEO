@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Preguntar lo d ei para q solo se aplique en un tramo lol
+        class etiqueta{
+            
+            constructor(nombreArt, refArt){
+                this.nombreArt = nombreArt;
+                this.refArt = refArt;
+            }
+
+            getNombreArt(){
+                return `Este es el nombre de tu articulo: ${this.nombreArt}`;
+            }
+
+            validarEtiqueta(){
+                let validacion = /(^[0-9]{4}-[a-z]{5}\/[0-9]{2}_[0-9]{1}$)/i;
+
+                if (validacion.test(this.refArt) == true){
+                    return true;
+                }
+
+                else {
+                    return false;
+                }
+            }
+        }
+
+        let producto = new etiqueta("Kekito", "2015-perrO/15_3");
+
+        console.log(producto.getNombreArt());
+        console.log(producto.validarEtiqueta());
+        
+    </script>
+</body>
+</html>

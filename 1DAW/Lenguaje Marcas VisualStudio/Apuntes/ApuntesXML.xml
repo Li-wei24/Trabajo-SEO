@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding="UTF-8"?>
+<!-- <!DOCTYPE agenda SYSTEM "ApuntesDTD.dtd"> -->
+<!--No podemos validar a la vez un dtd y xsd, por lo que comento esta linea para q no interfiera con el xsd-->
+
+<!--Necesario para poder empezar a progromar en xml-->
+
+<!--Necesitamos una etiqueta general que englobara todo el contenido del xml
+Es importante cerar bn las etiquetas y mantener un orden-->
+<agenda xsi:noNamespaceSchemaLocation="ApuntesXSD.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!-- Este atributo guarda un id del contacto para facilitar busqueda-->
+    <contacto codigo = "c1">
+        <nombre>Ángels Ainhoa</nombre>
+        <apellidos>Salinas Tinizaray</apellidos>
+        <movil>640844703</movil>
+
+        <!-- Aqui tenemos un atributo que guarda un nombre y en general la etiqueta un num-->
+        <movil nomEmpresa = "Empresa Imaginaria">555555555</movil>
+        <email>angelssalinas24@gmail.com</email>
+        <sexo>Mujer</sexo>
+    </contacto>
+
+    <contacto codigo = "c2">
+        <nombre>Pepe</nombre>
+        <apellidos>Gomez garcia</apellidos>
+        <movil>123456789</movil>
+        <movil nomEmpresa = "Empresa123">987654321</movil>
+        <email>pepegomez@gmail.com</email>
+        <sexo>Hombre</sexo>
+    </contacto>
+
+    <contacto codigo = "c3">
+        <nombre>berta</nombre>
+        <apellidos>Martinez gambon</apellidos>
+        
+        <email>berta.gambon@gmail.com</email>
+        <sexo>Mujer</sexo>
+    </contacto>
+</agenda>

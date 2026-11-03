@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<discos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="discos.xsd">
+    <disco id = "d1">
+        <marca>Sonido Muchado</marca>
+        <titulo>Los perror no entienden de internet (Y yo no entiendo de sentimientos)</titulo>
+        <artista>Depresion sonora</artista>
+        <ano>2025</ano>
+        <stock tienda = "online">10</stock>
+    </disco>
+
+    <disco id = "d2">
+        <marca>Sonido Muchacho</marca>
+        <titulo>Los sueños de nube</titulo>
+        <artista>Rojuu</artista>
+        <ano>2025</ano>
+        <stock tienda = "madrid">5</stock>
+    </disco>
+</discos>

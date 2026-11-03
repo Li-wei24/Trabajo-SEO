@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Tienda de Videojuegos (Grid)</title>
+        <style type="text/css">
+        
+            /*Ángels Salinas Tinizaray*/
+
+            /*Se aplica a todo el documento la fuente verdana*/
+            *{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            /* Definimos la refilla con la configuracion necesaria*/
+            #contenedor-grid {
+                display: grid;
+                grid-template-columns: 1fr 4fr 2fr;
+                grid-template-rows: 60px auto 40px;
+                gap: 15px;
+            }
+
+            /* Ocupa todo el ancho de la rejilla y el texto es centrado*/
+            header {
+                grid-column: 1 / 4;
+                text-align: center;
+            }
+
+            /* Ocupa solo los de la derecha y centra el texto*/
+            main {
+                grid-column: 2 / 4;
+                text-align: center;
+            }
+
+            /* Solo los hijos del main que sean cabeceras se pondran a la izq*/
+            main > h2 {
+                text-align: left;
+            }
+
+            /* Ocupa solo una columna pero es centrado gracias a las filas, generamos una linea de color gris*/
+            aside {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                border-right: 2px solid grey;
+                padding-right: 10px;
+            }
+
+            /* Pie de pagina que ocupa dolo el lado derecho y el texto es centrado */
+            footer {
+                grid-column: 2 / 4;
+                text-align: center;
+            }
+        
+            /* Le damos estilos al menu de navegacion*/
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            li {
+                display: inline-block;
+                padding: 5px;
+
+            }
+    </style>
+</head>
+<body>
+    <div id="contenedor-grid">
+        <header>
+            <h1>🎮 Tienda de Juegos Online</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <br>
+            <br>
+            <h2>Catálogo de Productos</h2>
+            <section id="productos">
+                <div>Juego 1</div>
+                <br>
+                <br>
+                <div>Juego 2</div>
+                <br>
+                <br>
+                <div>Juego 3</div>
+                <br>
+                <br>
+                <div>Juego 4</div>
+                <br>
+                <br>
+            </section>
+        </main>
+        <aside>
+            <h2>Filtros</h2>
+            <p>Categorías, Precio, Plataforma.</p>
+        </aside>
+        <footer>
+            <p>Aviso Legal | Política de Privacidad</p>
+        </footer>
+        
+    </div>
+</body>
+</html>

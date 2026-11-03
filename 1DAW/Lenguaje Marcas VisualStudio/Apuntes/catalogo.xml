@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE
+<catalogo tienda="PixelGames" 
+          xsi:noNamespaceSchemaLocation="catalogo.xsd" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <videojuego id="v101">
+        <titulo>The Legend of Zelda</titulo>
+        <desarrollador>Nintendo</desarrollador>
+        <plataforma digital="true">Nintendo Switch</plataforma>
+        <precio>59.99</precio>
+        <analisis>Un juego <destacado>obra maestra</destacado> con un mundo abierto increíble y sin <spoiler>revelar el final</spoiler> diré que es épico.</analisis>
+    </videojuego>
+
+    <videojuego id="v102">
+        <titulo>Cyberpunk 2077</titulo>
+        <desarrollador>CD Projekt Red</desarrollador>
+        <plataforma digital="true">PC</plataforma>
+        <plataforma digital="false">PlayStation</plataforma>
+        <precio>29.99</precio>
+        </videojuego>
+
+</catalogo>

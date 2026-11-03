@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--Sirve para crear mantener y trandformas info en bases de datos o web,
+esta compuesta x elementos, por ejemplo:
+    <nombre> Ángels </nombre>
+ Es sensible a su escritura, todos los elementos deben cerrarse y no pueden tener espacios en su declaracion
+ En caso de que solo sea un elemento porque no contiene nada:
+    <apellido/>
+Estos pueden tener atributos, unas propiedades especificas, por ejemplo: 
+    <coche velocidad = "100km" marca = "mercedes">coche de kiki</coche>
+Si deseamos introducir comentarios en el codigo, es exactamente igual a html, por ejemplo:
+    "<!-Esto es un ejemplo->"    
+CDATA son elementos con un contenido que no sera procesado, vamos que lo leera y aparecera tal cual, por ejemplo 
+cachitos de codigo que no queremos que sean interpretados, por ejemplo:
+    <![CDATA["Texto simple de ejemplo"]]>
+Existen palabras reservadas, entonces si queremos visualizarlas habra que hacerlo de una forma especial
+Vamos a formar un documento xml! -->
+
+<coches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="coches.xsd"> 
+           
+    <coche matricula = "keka1234">
+        <marca>ferrari</marca>
+        <modelo>m-8012</modelo>
+        <puertas>3</puertas>
+        <color>rojo</color>
+        <dia>2015-03-15</dia>
+        <precio venta = "ocasion">400000.00</precio>
+    </coche>
+
+    <coche matricula = "keka5678">
+        <marca>subaru</marca>
+        <modelo>impreza</modelo>
+        <puertas>4</puertas>
+        <color>azul oscuro</color>
+        <dia>2015-03-15</dia>
+        <precio venta = "nuevo">20000</precio>
+    </coche>
+    
+</coches>

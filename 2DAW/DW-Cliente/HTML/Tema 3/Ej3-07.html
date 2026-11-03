@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cuadrado = [
+            ["#", "#","#", "#", "#"],
+            ["#", "","", "", "#"],
+            ["#", "","", "", "#"],
+            ["#", "","", "", "#"],
+            ["#", "#","#", "#", "#"]
+        ];
+
+        let fila = Math.floor(Math.random()*5);
+        let columna = Math.floor(Math.random()*5);
+
+        cuadrado [fila][columna] = "*";
+        let esta = false;
+
+        for(let i = 1; i < 4; i++){
+            for (let j = 1; j < 4; j++){
+                if (cuadrado [i][j] === "*"){
+                    esta = true;
+                }
+
+            }
+        }
+
+        for (let i = 0; i < cuadrado.length; i++) {
+            document.write(`<pre>${cuadrado[i].join(" ")}</pre>`);
+        }
+
+        alert(`Se encuentra dentro del cuadrado? ${esta}`)
+
+    </script>
+</body>
+</html>

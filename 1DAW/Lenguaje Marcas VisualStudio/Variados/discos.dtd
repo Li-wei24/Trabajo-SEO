@@ -1,0 +1,9 @@
+<!ELEMENT biblioteca (disco+)>
+<!ELEMENT disco (sello, titulo, artista, ano, stock)>
+<!ATTLIST disco id ID #REQUIRED>
+<!ELEMENT sello (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT artista (#PCDATA)>
+<!ELEMENT ano (#PCDATA)>
+<!ELEMENT stock (#PCDATA)>
+<!ATTLIST stock tienda (online | madrid) #REQUIRED>

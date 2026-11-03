@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let elementos = [];
+        let pares = [];
+        let contadorPares = 0;
+
+        for (let i = 0; i < 100; i++){
+            elementos[i] = Math.floor(Math.random()*100);
+            
+            if (elementos[i] % 2 == 0){
+                pares[contadorPares] = elementos[i];
+                contadorPares++;
+            }
+        }
+
+        console.log(pares)
+
+    </script>
+</body>
+</html>

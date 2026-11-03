@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const letrasNif = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E","T"];
+
+        const validarNif = (numeroNif) => {
+            let formatoValido = /^[0-9]{8}[a-z]$/i;
+            if (!formatoValido.test(numeroNif)) {
+                return false; // Si el formato no coincide, ya es falso
+            }
+
+            let numeros = parseInt(numeroNif.substring(0, 8));
+            let letraUsuario = numeroNif.charAt(8).toUpperCase();
+
+            let indice = numeros % 23;
+            let letraCorrecta = letrasNif[indice];
+
+            return letraUsuario === letraCorrecta;
+        };
+
+        let nifPrueba = "50637231V";
+        console.log(`¿El NIF ${nifPrueba} es válido? ${validarNif(nifPrueba)}`);
+    </script>
+</body>
+</html>

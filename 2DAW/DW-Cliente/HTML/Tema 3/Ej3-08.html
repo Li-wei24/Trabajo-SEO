@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let conjunto = new Set();
+        let array1 = [12, 12, 12, 14];
+        let array2 = [11, 11, 13, 15];
+        let array3 = ["i", "j", "k", "l"];
+        conjunto = [...array1, ...array2, ...array3];
+
+        for (let elemento of conjunto){
+            console.log(elemento);
+        }
+
+        console.log(conjunto.size);
+        //Porque los conjuntos no aceptan repeteciones
+        //Pues porque ese es el orden de insercion que le di
+    </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Digital del Centro</title>
+  <style>
+    /* ==========================================================================
+       1. TOKENS DE DISEÑO CENTRALIZADOS EN :ROOT (MODO CLARO POR DEFECTO)
+       ========================================================================== */
+    :root {
+      --color-principal: #C0504D;
+      --color-fondo: #f4f4f4;
+      --color-tarjeta: #ffffff;
+      --color-texto: #222222;
+      --color-texto-suave: #666666;
+      --color-borde: #dddddd;
+    }
+
+    /* ==========================================================================
+       2. ESTILOS GENERALES Y LAYOUT
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header Corporativo */
+    header {
+      background-color: var(--color-principal);
+      color: #ffffff;
+      text-align: center;
+      padding: 3rem 1rem 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .btn-header-text {
+      color: #ffffff;
+      background: none;
+      border: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-header-box {
+      background-color: #ffffff;
+      color: var(--color-principal);
+      border: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Contenedor principal de tarjetas */
+    main {
+      max-width: 1050px;
+      width: 100%;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+      flex: 1;
+    }
+
+    .grid-tarjetas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+
+    /* ==========================================================================
+       3. COMPONENTE TARJETA
+       ========================================================================== */
+    .tarjeta {
+      background-color: var(--color-tarjeta);
+      border: 1px solid var(--color-borde);
+      border-top: 5px solid var(--color-principal);
+      border-radius: 12px;
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background-color: color-mix(in srgb, var(--color-principal) 15%, transparent);
+      color: var(--color-principal);
+      font-weight: bold;
+      font-size: 0.75rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+    }
+
+    .tarjeta h2 {
+      color: var(--color-principal);
+      font-size: 1.15rem;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+    }
+
+    .tarjeta p {
+      color: var(--color-texto-suave);
+      font-size: 0.9rem;
+      line-height: 1.45;
+      margin-bottom: 1.8rem;
+      flex: 1;
+    }
+
+    .btn-tarjeta {
+      background-color: var(--color-principal);
+      color: #ffffff;
+      border: none;
+      padding: 0.65rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    /* Variantes por herencia */
+    .tarjeta.destacada {
+      --color-principal: #2F75B5;
+    }
+
+    .tarjeta.recomendado {
+      --color-principal: #70AD47;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.8rem 1rem;
+      color: var(--color-texto-suave);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--color-borde);
+      background-color: var(--color-fondo);
+    }
+
+    /* ==========================================================================
+       4. MODO OSCURO AUTOMÁTICO (MEDIA QUERY)
+       ========================================================================== */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-fondo: #1e1e1e;
+        --color-tarjeta: #2b2b2b;
+        --color-texto: #f2f2f2;
+        --color-texto-suave: #cccccc;
+        --color-borde: #444444;
+        --color-principal: #F4B183; /* Naranja claro adaptado para modo oscuro */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Biblioteca Digital del Centro</h1>
+    <p>Consulta libros, recursos interactivos y materiales recomendados para mejorar tu aprendizaje.</p>
+    <div class="header-buttons">
+      <a href="#" class="btn-header-text">Ver novedades</a>
+      <button class="btn-header-box">Buscar recursos</button>
+    </div>
+  </header>
+
+  <!-- Rejilla de Tarjetas -->
+  <main>
+    <section class="grid-tarjetas">
+      
+      <!-- Tarjeta 1 -->
+      <article class="tarjeta">
+        <span class="etiqueta">Lectura</span>
+        <h2>Club de lectura</h2>
+        <p>Cada mes trabajamos una novela diferente y compartimos opiniones en pequeños grupos.</p>
+        <button class="btn-tarjeta">Apuntarme</button>
+      </article>
+
+      <!-- Tarjeta 2 -->
+      <article class="tarjeta destacada">
+        <span class="etiqueta">Tecnología</span>
+        <h2>Recursos web</h2>
+        <p>Guías, tutoriales y actividades para aprender HTML, CSS y diseño accesible.</p>
+        <button class="btn-tarjeta">Explorar</button>
+      </article>
+
+      <!-- Tarjeta 3 -->
+      <article class="tarjeta recomendado">
+        <span class="etiqueta">Recomendado</span>
+        <h2>Lecturas del trimestre</h2>
+        <p>Selección de libros recomendados por el departamento de Lengua.</p>
+        <button class="btn-tarjeta">Ver lista</button>
+      </article>
+
+      <!-- Tarjeta 4 -->
+      <article class="tarjeta">
+        <span class="etiqueta">Aviso</span>
+        <h2>Devoluciones pendientes</h2>
+        <p>Revisa tus préstamos activos y evita retrasos en la devolución.</p>
+        <button class="btn-tarjeta">Revisar</button>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Biblioteca Digital · Curso 2025/2026
+  </footer>
+
+  <!--Prompts usados
+  
+  Actúa como un Desarrollador Frontend Senior. Genera una estructura HTML5 semántica y una hoja 
+  de estilos CSS para una web llamada 'Biblioteca Digital del Centro'. Configura un contenedor 
+  :root donde centralices obligatoriamente los siguientes tokens de diseño en variables CSS: 
+  --color-principal: #C0504D;, --color-fondo: #f4f4f4;, --color-tarjeta: #ffffff;, --color-texto: 
+  #222222;, --color-texto-suave: #666666; y --color-borde: #dddddd;. Prohibido usar valores 
+  hexadecimales fuera del :root.
+  
+  Diseña una maquetación en CSS Grid con 3 columnas iguales. Crea el componente .tarjeta que utilice 
+  --color-tarjeta de fondo, un borde superior destacado de 5px con --color-principal y bordes redondeados. 
+  Dentro de la tarjeta, añade: a) una .etiqueta cuyo fondo sea una variante transparente usando color-mix
+  (in srgb, var(--color-principal) 15%, transparent) y texto con --color-principal; b) un título h2 teñido 
+  con --color-principal; c) un párrafo con --color-texto-suave; y d) un botón .btn-tarjeta con fondo --color-principal
+   y texto blanco que dependa estrictamente de la herencia de la variable sin reglas descendentes explícitas
+   
+   Actúa como un Auditor de Accesibilidad Web certificado (WCAG 2.1 nivel AA). Revisa los botones situados sobre 
+   el fondo rojo corporativo (#C0504D) del header de la 'Biblioteca Digital del Centro'. Evalúa los ratios de contraste
+    de texto e identifica cualquier fallo según el criterio de conformidad 1.4.3 (Contraste mínimo). Propón una corrección
+     CSS que mantenga la estética pero asegure un ratio mínimo de contraste accesible.
+     
+     Añade soporte para temas en las tarjetas utilizando la herencia nativa de variables CSS en lugar de crear reglas 
+     específicas para los elementos internos. Define la clase .tarjeta.destacada sobrescribiendo únicamente la variable 
+     --color-principal: #2F75B5; y la clase .tarjeta.recomendado sobrescribiendo --color-principal: #70AD47;. Asegúrate de que 
+     los títulos, botones y etiquetas internos se adapten automáticamente al color heredado-->
+</body>
+</html>
